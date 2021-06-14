@@ -386,7 +386,7 @@ result[j,i] = res
 <p>Encode the data. This is segments <a href="#seg1">one</a> and <a href="#seg2">two</a> of the filter circuit. The function that constructs this portion of the filter circuit is passed as the encoder in the __init__ function.</p>
 </li>
 <li>
-<p>Construct the full circuit. This adds segment <a href="#seg3">three</a> to the circuit. The function that builds the pooling segment off of the encoder segment is passed as the pooler in the __init__ funciton.</p>
+<p>Construct the full circuit. This adds segment <a href="#seg3">three</a> to the circuit. The function that builds the pooling segment off of the encoder segment is passed as the pooler in the __init__ function.</p>
 <p>This is why we have such an oddly shaped kernel. Since, when the network is trianing, tensorflow automatically adjust the waits of the kernel, we are using the values of the kernel as the rotations for the adjustable gates in the quantum circuit. This way, the quantum circuit is automatically trained to work best with the dataset.</p>
 </li>
 <li>
