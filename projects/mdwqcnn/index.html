@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Melanoma Detection with Quantum Convolutional Neural Networks | Luke Wasko</title>
+    <title>Melanoma Detection with Quantum Convolutional Neural Networks | Lily Wasko</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Junior year research">
     <meta name="generator" content="Hugo 0.83.1" />
@@ -35,12 +35,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://8-bit-confusion.github.io/projects/mdwqcnn/" /><meta property="article:section" content="projects" />
 <meta property="article:published_time" content="2021-06-13T00:00:00&#43;00:00" />
-<meta property="article:modified_time" content="2021-06-13T00:00:00&#43;00:00" /><meta property="og:site_name" content="Luke Wasko" />
+<meta property="article:modified_time" content="2021-06-13T00:00:00&#43;00:00" /><meta property="og:site_name" content="Lily Wasko" />
 
 <meta itemprop="name" content="Melanoma Detection with Quantum Convolutional Neural Networks">
 <meta itemprop="description" content="Junior year research"><meta itemprop="datePublished" content="2021-06-13T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-06-13T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2820">
+<meta itemprop="wordCount" content="2838">
 <meta itemprop="keywords" content="images,melanoma,quantum," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Melanoma Detection with Quantum Convolutional Neural Networks"/>
 <meta name="twitter:description" content="Junior year research"/>
@@ -62,7 +62,7 @@
   <div class="flex-l justify-between items-center center">
     <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
       
-        Luke Wasko
+        Lily Wasko
       
     </a>
     <div class="flex-l items-center">
@@ -183,7 +183,7 @@
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><a href="https://github.com/8-bit-confusion/quantum-melanoma-identification" title="quantum-melanoma-identification">View this project on GitHub</a> :)</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><a href="https://github.com/8-bit-confusion/quantum-melanoma-identification" title="quantum-melanoma-identification">View this project&rsquo;s code on GitHub</a> :)</p>
 <h1 id="background-a-namebackgrounda">Background <a name="background"></a></h1>
 <h2 id="melanoma-a-namemelanomaa">Melanoma <a name="melanoma"></a></h2>
 <p>Melanoma is a deadly skin cancer. Out of all skin lesions,it is especially dangerous because it is outnumbered by other skin lesions, and it is difficult to identify. However, melanoma is best treated when caught early, so treatment relies on rapid identification.</p>
@@ -199,6 +199,7 @@
 <p>Almost all of these papers used some form of Convolutional Neural Network, or CNN, as it is generally considered the best algorithm for image recognition. CNNs are good at rapidly learning patterns in image data, making them a logical choice for this task.</p>
 <p>However, a relatively new algorithm also shows significant promise at image recognition:</p>
 <h2 id="the-qcnn-a-nameqcnna">The QCNN <a name="qcnn"></a></h2>
+<p>Note: for an explanation of quantum computing, see the <a href="/projects/qsdc-comm#quantum-computing">Quantum Computing</a> section in the Superdense Coding project.</p>
 <p>The QCNN is a relatively new proposed structure for neural networks that takes advantage of quantum computing. As of the last time I checked, only one article has been published that uses a QCNN for image recognition, and no researchers have attempted to use if for melanoma identification thus far.</p>
 <h3 id="structure-a-nameqcnn-structurea">Structure <a name="qcnn-structure"></a></h3>
 <p>There are two main structures of quantum convolutional neural network, or QCNN:</p>
@@ -386,7 +387,7 @@ result[j,i] = res
 <p>Encode the data. This is segments <a href="#seg1">one</a> and <a href="#seg2">two</a> of the filter circuit. The function that constructs this portion of the filter circuit is passed as the encoder in the __init__ function.</p>
 </li>
 <li>
-<p>Construct the full circuit. This adds segment <a href="#seg3">three</a> to the circuit. The function that builds the pooling segment off of the encoder segment is passed as the pooler in the __init__ function.</p>
+<p>Construct the full circuit. This adds segment <a href="#seg3">three</a> to the circuit. The function that builds the pooling segment off of the encoder segment is passed as the pooler in the __init__ funciton.</p>
 <p>This is why we have such an oddly shaped kernel. Since, when the network is trianing, tensorflow automatically adjust the waits of the kernel, we are using the values of the kernel as the rotations for the adjustable gates in the quantum circuit. This way, the quantum circuit is automatically trained to work best with the dataset.</p>
 </li>
 <li>
@@ -401,7 +402,7 @@ result[j,i] = res
 </code></pre>
 <h2 id="results-and-plans-a-nameresultsa">Results and Plans <a name="results"></a></h2>
 <p>Unfortunately, accuracy data could not be collected for the hybrid model that was designed in this research. The way the filter circuits are being implemented is incredibly inefficient. The entire circuit is built with different rotation values for the gates, then sent to a quantum computer and run, for every pixel of every image in the dataset. This makes training the network, even on an incredibly limited subset of the dataset, take such a long time as to render the algorithm useless.</p>
-<p>Over the course of my senior year, this project will be revisited. I plan to rewrite much of the code, as well as work with experts in the quantum computing field to optomize the process by which I create the quantum circuits.</p>
+<p><del>Over the course of my senior year, this project will be revisited. I plan to rewrite much of the code, as well as work with experts in the quantum computing field to optomize the process by which I create the quantum circuits.</del></p>
 <h1 id="sources-a-namesourcesa">Sources <a name="sources"></a></h1>
 <div style="text-indent: -36px; padding-left: 36px;">
 <p>Cong, I., Choi, S., &amp; Lukin, M. (2018) Quantum convolutional neural networks. ArXiv. <a href="https://arxiv.org/pdf/1810.03787.pdf">https://arxiv.org/pdf/1810.03787.pdf</a></p>
@@ -450,7 +451,7 @@ result[j,i] = res
     <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://8-bit-confusion.github.io" >
-    &copy;  Luke Wasko 2021 
+    &copy;  Lily Wasko 2021 
   </a>
     <div>
 

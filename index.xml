@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Luke Wasko</title>
+    <title>8-bit-confusion on Lily Wasko</title>
     <link>https://8-bit-confusion.github.io/</link>
-    <description>Recent content on Luke Wasko</description>
+    <description>Recent content in 8-bit-confusion on Lily Wasko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure Communication Using Superdense Coding of the GHZ 5 State</title>
+      <link>https://8-bit-confusion.github.io/projects/qsdc-comm/</link>
+      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/projects/qsdc-comm/</guid>
+      <description>View this project&amp;rsquo;s code on GitHub :)
+Background  Quantum Computing  Qubits  The most basic unit of information in classical computing is the bit. It stores a value either of 0 or 1, which represent the presense or absense of electrons in a transistor.
+In quantum computing, however, the most basic unit of information is the qubit. A qubit, like a bit, can store either 0 or 1, but it also has the unique ability to store a value that is both 0 and 1: a superposition state.</description>
+    </item>
+    
     <item>
       <title>Melanoma Detection with Quantum Convolutional Neural Networks</title>
       <link>https://8-bit-confusion.github.io/projects/mdwqcnn/</link>
       <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://8-bit-confusion.github.io/projects/mdwqcnn/</guid>
-      <description>View this project on GitHub :)
+      <description>View this project&amp;rsquo;s code on GitHub :)
 Background  Melanoma  Melanoma is a deadly skin cancer. Out of all skin lesions,it is especially dangerous because it is outnumbered by other skin lesions, and it is difficult to identify. However, melanoma is best treated when caught early, so treatment relies on rapid identification.
-According to the Skin Cancer Foundation, an estimated 7,180 people will die from melanoma in 2021 alone.
-Machine Learning  Machine learning has been a succesful tool for diagnosing other diseases from medical images.</description>
+According to the Skin Cancer Foundation, an estimated 7,180 people will die from melanoma in 2021 alone.</description>
     </item>
     
   </channel>

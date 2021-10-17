@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Secure Communication Using Superdense Coding of the GHZ 5 State | Lily Wasko</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Senior year research">
+    <meta name="generator" content="Hugo 0.83.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+
+  
+  
+    <link rel="stylesheet" href="/ananke/dist/main.css_5c99d70a7725bacd4c701e995b969fea.css" >
+  
+
+
+
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Secure Communication Using Superdense Coding of the GHZ 5 State" />
+<meta property="og:description" content="Senior year research" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://8-bit-confusion.github.io/projects/qsdc-comm/" /><meta property="article:section" content="projects" />
+<meta property="article:published_time" content="2021-10-06T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-10-06T00:00:00&#43;00:00" /><meta property="og:site_name" content="Lily Wasko" />
+
+<meta itemprop="name" content="Secure Communication Using Superdense Coding of the GHZ 5 State">
+<meta itemprop="description" content="Senior year research"><meta itemprop="datePublished" content="2021-10-06T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-10-06T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="3368">
+<meta itemprop="keywords" content="dense encoding,secure communication,quantum," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Secure Communication Using Superdense Coding of the GHZ 5 State"/>
+<meta name="twitter:description" content="Senior year research"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://8-bit-confusion.github.io/images/fancybg.gif');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Lily Wasko
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+<a href="https://github.com/8-bit-confusion" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Secure Communication Using Superdense Coding of the GHZ 5 State</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Senior year research
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://8-bit-confusion.github.io/projects/qsdc-comm/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://8-bit-confusion.github.io/projects/qsdc-comm/&amp;text=Secure%20Communication%20Using%20Superdense%20Coding%20of%20the%20GHZ%205%20State" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://8-bit-confusion.github.io/projects/qsdc-comm/&amp;title=Secure%20Communication%20Using%20Superdense%20Coding%20of%20the%20GHZ%205%20State" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Secure Communication Using Superdense Coding of the GHZ 5 State</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-10-06T00:00:00Z">October 6, 2021</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><a href="https://github.com/8-bit-confusion/superdense-coding" title="sdc-ghz5-secure-comm">View this project&rsquo;s code on GitHub</a> :)</p>
+<h1 id="background-a-namebackgrounda">Background <a name="background"></a></h1>
+<h2 id="quantum-computing-a-namequantum-computinga">Quantum Computing <a name="quantum-computing"></a></h2>
+<h3 id="qubits-a-namequbitsa">Qubits <a name="qubits"></a></h3>
+<p>The most basic unit of information in classical computing is the bit. It stores a value either of 0 or 1, which represent the presense or absense of electrons in a transistor.</p>
+<p>In quantum computing, however, the most basic unit of information is the qubit. A qubit, like a bit, can store either 0 or 1, but it also has the unique ability to store a value that is both 0 <em>and</em> 1: a superposition state.</p>
+<p>Each of these superposition states can be represented by a point on the surface of the bloch sphere:</p>
+<p><img class="special-img-class" style="width:50%" src="/images/bloch-sphere.png" /></p>
+<h4 id="image-from-brillianthttpsbrilliantorgcoursesquantum-computing">Image from <a href="https://brilliant.org/courses/quantum-computing/">Brilliant</a></h4>
+<p><small><small>For reference, the horizontal axis between |-〉 and |+〉 will be referred to as the x-axis, the vertical axis will be referred to as the z-axis, and the axis running between |µ〉 and |ν〉 will be referred to as the y-axis.</small></small></p>
+<p>The classical-like states |0〉 and |1〉 are shown at the top and bottom of the bloch sphere. Any superposition between zero and one would fall somewhere on the surface of the sphere between these two points. While there are technically infinite superposition states (there are inifinte points on any surface), the only states referred to here will be |0〉 and |1〉, |+〉, and |-〉. When a qubit in superposition is measured, it collapses into either the |0〉 state or the |1〉 state. The probability of either outcome is determined by the superposition, and when the state collapses, all information about the superposition state is lost.</p>
+<h3 id="quantum-gates-a-namequantum-gatesa">Quantum Gates <a name="quantum-gates"></a></h3>
+<p>In classical computing, logic gates are used to perform operations on bits. These include gates such as <strong>not</strong>, which flips that value of a bit, <strong>and</strong>, which outputs a bit with value 1 if both of it&rsquo;s inputs are 1, <strong>or</strong>, which outputs 1 if <em>either</em> input is 1, and several others.</p>
+<p>Note that the <strong>not</strong> gate is the only classical logic gate that acts on only a single bit; every other gate requires at least two bits as input.</p>
+<p>In quantum computing, due to the more complex nature of qubits, there are many single qubit logic gates. Those described here are by now means an exhaustive list; rather, they are simply the set of gates necessary for this research. Each of these single-qubit gates can be thought of as a rotation on the bloch sphere.
+<br><small><small>(More informtion about quantum gates can be found on the <a href="https://quantum-computing.ibm.com/composer/docs/iqx/operations_glossary" title="operations glossary">IBM quantum operations glossary</a>, but even this is not a complete list.)</small></small></p>
+<p>The first quantum gate needed for this research is the quantum <strong>not</strong> gate, also sometimes called the <strong>X</strong> gate. This gate functions much like the classical not gate, flipping a qubit in the |0〉state to a the |1〉 state and vice versa. This gate is analogous to a rotation around the horizontal axis. Since the superposition states |+〉 and |-〉are on the axis of rotation, they are unchanged by this gate.</p>
+<p><a name="h-gate"></a>
+The second quantum gate is one of the most important gates in quantum computing: the <strong>hadamard</strong>, or <strong>H</strong> gate. This gate is used to induce superposition: it maps |0〉 to |+〉 and |1〉 to |-〉 and vice versa. This is equivalent to a rotation around the line x=z. The states |+〉 and |-〉 both represent a 50/50 chance of getting either a 0 or a 1 when the qubit is measured.</p>
+<p><a name="z-gate"></a>
+The final single-qubit quantum gate that will be mentioned here is the <strong>Z</strong> gate. The Z gate is equivalent to a rotation around the z-axis, and it maps |+〉 onto |-〉 and |-〉 onto |+〉. Since |0〉 and |1〉 are on the axis of rotation, they are unaffected by the Z gate.</p>
+<p>Something important to keep in mind about the gates mentioned here is that they are all reversible: apply them twice in a row, and the qubit will return to its original state. In fact, this applies to <strong>nearly every single-qubit quantum gate.</strong></p>
+<h3 id="entanglement-a-nameentanglementa">Entanglement <a name="entanglement"></a></h3>
+<p>Now that we&rsquo;ve discussed superposition and quantum gates, it&rsquo;s time to talk about <strong>entanglement</strong>. This is quite a complex topic, so bear with me.</p>
+<p>Let&rsquo;s start off simple: how do we describe the state of two qubits at once? Let&rsquo;s say we have to qubits, both in the |0〉 state. The <strong>joint state</strong>, a way to describe both qubits together as a system, can be written using the tensor product:</p>
+<img class="special-img-class" style="width:12%" src="https://latex.codecogs.com/svg.latex?|0\rangle&space;\otimes&space;|0\rangle"/>
+<p><a name=plus-state></a>Next, let&rsquo;s talk about the |+〉 state. Remember: this represents a 50/50 chance of seeing either 0 or 1 when the qubit is measured. Another way we can write this is:</p>
+<img class="special-img-class" style="width:24%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|0\rangle&space;&plus;&space;\frac{1}{\sqrt{2}}|1\rangle" title="\frac{1}{\sqrt{2}}|0\rangle + \frac{1}{\sqrt{2}}|1\rangle"/>
+<p>The coefficients before each state denote the <strong>square root</strong> of the probability of measuring that state, so a 0.5 probability is shown with the coefficient <strong>1 over the square root of 2</strong>.</p>
+<p>It is usually convention to normalize the coefficients of a state so that, when squared, they add up to 1, but this isn&rsquo;t necessary to mathematically define a state. Let&rsquo;s say we have two qubits, each in some aribitrary superposition state:</p>
+<img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?a_1|0\rangle&space;&plus;&space;a_2|1\rangle"/>
+<p>and</p>
+<img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?b_1|0\rangle&space;&plus;&space;b_2|1\rangle"/>
+<p>To write the joint state of these two qubits, we use the tensor product:</p>
+<img class="special-img-class" style="width:50%" src="https://latex.codecogs.com/svg.latex?(a_1|0\rangle&space;&plus;&space;a_2|1\rangle)&space;\otimes&space;(b_1|0\rangle&space;&plus;&space;b_2|1\rangle)"/>
+<p>The tensor product can be distributed in the same way as integer multipliaction, giving us</p>
+<img class="special-img-class" style="width:100%" src="https://latex.codecogs.com/svg.latex?a_1b_1|0\rangle\otimes|0\rangle&space;&plus;&space;a_1b_2|0\rangle\otimes|1\rangle&space;&plus;&space;a_2b_1|1\rangle\otimes|0\rangle&space;&plus;&space;a_2b_2|1\rangle\otimes|1\rangle"/>
+<p>However, this is a little confusing. It&rsquo;s hard to tell how many qubits this joint state is referring to, and hard to understand in general. To simplify, we can write the joint state of two qubits</p>
+<img class="special-img-class" style="width:12%" src="https://latex.codecogs.com/svg.latex?|0\rangle&space;\otimes&space;|0\rangle"/>
+<p>as</p>
+<img class="special-img-class" style="width:6%" src="https://latex.codecogs.com/svg.latex?|00\rangle"/>
+<p>Much nicer! It&rsquo;s obvious that this is referring to two qubits: there are two numbers inside the <strong>ket</strong> (the vertical bar and angle brace), and it&rsquo;s much cleaner looking over all. Using this convention, our two arbitrary superpositions can be written as</p>
+<img class="special-img-class" style="width:65%" src="https://latex.codecogs.com/svg.latex?a_1b_1|00\rangle&space;&plus;&space;a_1b_2|01\rangle&space;&plus;&space;a_2b_1|10\rangle&space;&plus;&space;a_2b_2|11\rangle"/>
+<p>This is much easier to understand. We can see that this expression refers to two qubits, since there are two numbers in each ket, and we can see that there are four possible outcomes when the joint system is measured, since there are four terms being added.</p>
+<p>Now, consider the joint state</p>
+<img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?a|00\rangle + b|11\rangle"/>
+<p>What&rsquo;s interesting about this state is that unlike the other arbitrary state we looked at, which can be split back up into two separate<br>single-qubit expressions joined by a tensor product, <em><strong>this state cannot be split</strong></em>. We know that it refers to two qubits since there are two numbers in the kets, but there aren&rsquo;t enough terms to split this up. What does this mean??</p>
+<p>This is entanglement! We&rsquo;re finally here! Entanglement is simply the name given to joint states that, like this one, can&rsquo;t be split up to refer to individual qubits.</p>
+<h2 id="superdense-coding-a-namesdca">Superdense Coding <a name="sdc"></a></h2>
+<p>Annnndd just like that, we&rsquo;re moving on again. Now that we&rsquo;ve talked about entanglement, we can finally talk about superdense coding, the focus of this research! Yay!</p>
+<p>The goal of superdense coding is to store 2 bits of information in a single qubit, and <em>still be able to extract that information again afterward</em>. It&rsquo;s easy enough to store a lot of information in a qubit: a point on the sphere can be definited using two rotations of variable size, which can each have infinite decimal places and therefore store infinite bits. However, this information would be nearly impossible to extract. For one thing, since a measurement of a qubit gives either a 1 or a 0, we can only converge on the values of the rotations over time with repeated measurements; it would take infinite measurements to determine them exactly.</p>
+<p>But the bigger problem is this: when we measure a qubit, it collapses. Every time we measure it after that, we will always get the value we measured the first time. For us to make a large number of measurements, we need to prepare a large number of qubits in the same state. When we know exactly what the state is, this isn&rsquo;t the easiest thing to do (but it is possible). However, when we don&rsquo;t know what state the qubit is in, such as when someone sends it to as as part of a communication, creating the qubit again from scratch is <em><strong>impossible</strong></em>.</p>
+<p>Why, you may be asking, can&rsquo;t we just make copies of the qubit, and measure those? Why would we have to recreate it from the beginning? The answer to that question is the <strong>quantum no-cloning theorem</strong>. The quantum no-cloning theorem states that for a pair of qubits, one in the state |0〉 and one in some arbitrary state<br>|ψ〉, there exists <em>no series of gates</em> that results in two qubits, both in the state |ψ〉.</p>
+<details open>
+<summary>To "briefly" explain why, let's look at some hypothetical circuit COPY that could copy the states.<br><small><small>(This is just a bunch of math, so if you'd rather just take my word for it that we can't clone qubits, feel free to skip this explanation and keep reading.)</small></small></summary>
+<p>If we write our aribtrary state |ψ〉 as α|0〉 + β|1〉, we can expand our circuit</p>
+<img class="special-img-class" style="width:45%" src="https://latex.codecogs.com/svg.latex?COPY(|\psi\rangle\otimes|0\rangle)=|\psi\rangle\otimes|\psi\rangle"/>
+<p>like so:</p>
+<img class="special-img-class" style="width:55%" src="https://latex.codecogs.com/svg.latex?[...]=(\alpha|0\rangle+\beta|1\rangle)\otimes(\alpha|0\rangle+\beta|1\rangle)"/>
+<p>and then further to:</p>
+<img class="special-img-class" style="width:65%" src="https://latex.codecogs.com/svg.latex?[...]=\alpha^{2}|00\rangle+\beta^{2}|11\rangle+\alpha\beta(|01\rangle+|10\rangle)"/>
+<p>But! We can also expand |ψ〉 <em>first</em> and then apply copy to each of the components:</p>
+<img class="special-img-class" style="width:80%" src="https://latex.codecogs.com/svg.latex?COPY(|\psi\rangle\otimes|0\rangle)=COPY(\alpha|0\rangle\otimes|0\rangle+\beta|1\rangle\otimes|0\rangle)"/>
+<p>Distributing COPY gives us:</p>
+<img class="special-img-class" style="width:60%" src="https://latex.codecogs.com/svg.latex?[...]=\alpha(COPY|00\rangle)+\beta(COPY|10\rangle)"/>
+<p>And finally we simplify:</p>
+<img class="special-img-class" style="width:33%" src="https://latex.codecogs.com/svg.latex?[...]=\alpha|00\rangle+\beta|11\rangle"/>
+<p>If the COPY circuit was possible, these two final equations would be equal, so let&rsquo;s set them equal to each other:</p>
+<img class="special-img-class" style="width:80%" src="https://latex.codecogs.com/svg.latex?\alpha^{2}|00\rangle+\beta^{2}|11\rangle+\alpha\beta(|01\rangle+|10\rangle)=\alpha|00\rangle+\beta|11\rangle"/>
+<p>For these two expressions to be equal, we can see that α<sup>2</sup> must be equal to α, β<sup>2</sup> must be equal to β, and αβ must be equal to zero. All of these conditions are only met when either α=1, β=0 or α=0, β=1. If you take a closer look at what those coefficients would do to the states, you might notice something: the two possible conditions represent the two classical-like states, |0〉 and |1〉.</p>
+<p>What this means for our COPY circuit is that it will only ever work on a qubit that is in one of the classical-like states, so unfortunately we can&rsquo;t copy any arbitrary state.</p>
+</details>
+<p>The upshot of this all is that we can&rsquo;t make use of the rotations or coefficients in a quantum state to store many classical bits, because we can&rsquo;t extract them again afterward. The aim of superdense encoding is to store <strong>two</strong> classical bits in a <strong>single</strong> qubit. To do this, we&rsquo;ll have to find some other method of storing data in a quantum state.</p>
+<h3 id="the-bell-state-a-namethe-bell-statea">The Bell State <a name="the-bell-state"></a></h3>
+<p>In the last section, we saw the arbitrary entangled state</p>
+<img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?a|00\rangle + b|11\rangle"/>
+<p>Much like</p>
+<img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?a_1|0\rangle&space;&plus;&space;a_2|1\rangle"/>
+<p>is an arbitrary form of the |+〉 state,</p>
+<img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?a|00\rangle + b|11\rangle"/>
+<p>is an arbitrary form of the Bell State. The Bell State is the simplest entangled quantum state, and it looks like this:</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|00\rangle+\frac{1}{\sqrt{2}}|11\rangle"/>
+<p>You might notice that this looks very similar to the <a href="#plus-state">|+〉 state</a>, and you&rsquo;d be correct! The |+〉 state has a 50/50 chance of being measured as 0 or 1, and when measured, the Bell State has a 50/50 chance for either both qubits to be measured as 0, or both to be measured as 1. This will make more sense when we look at how the State is constructed with gates.</p>
+<p><img class="special-img-class" style="width:50%" src="/images/bell.png" /></p>
+<p>We start off with a Hadamard gate, which takes us from the state |00〉 to the state</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|00\rangle+\frac{1}{\sqrt{2}}|10\rangle"/>
+<p>Then, we apply a new gate. The <strong>controlled not</strong> gate, or <strong>CX</strong> gate, is the first (and only) two qubit gate mentioned here. Luckily, it&rsquo;s faily simple. It functions as the <strong>X</strong> gate <em><strong>iff</strong></em> the <strong>control qubit</strong> (in this case, the first qubit), is in the state |1〉.</p>
+<p>But wait! The control qubit isn&rsquo;t in the |1〉 state <em>or</em> the |0〉 state when we apply the <strong>CX</strong> gate, it&rsquo;s in the |+〉 state! What happens now??</p>
+<p>The answer is entanglement. When measured, the first qubit will either be in the state |0〉, in which case the <strong>CX</strong> gate wouldn&rsquo;t have acted and the second qubit would also be |0〉, <em>OR</em> the first qubit will be in the state |1〉, in which case the <strong>CX</strong> <em>would</em> have acted, and the second qubit will <em>also</em> be in the the |1〉 state. However, up until we measure the system, we can&rsquo;t know what state either qubit is in, and we can&rsquo;t talk about them separately, since the second qubit depends on the first!</p>
+<p>Alright, let&rsquo;s really dig into superdense coding now. Let&rsquo;s say that our two friends of cryptography fame, Alice and Bob, are in the same physical location. Let&rsquo;s say that they prepare two qubits in the Bell State, and each take one of the qubits physically. Alice and Bob then go home to their separate houses with separate quantum computers.</p>
+<h3 id="encoding-information-in-alices-qubit">Encoding Information in Alice&rsquo;s Qubit</h3>
+<p>Alright. How do we encode information into Alice&rsquo;s qubit (and by extension, the joint entangled state)?</p>
+<p>If we wanted to encode a 1 in a classical bit, we would use a not gate to flip it from the 1 state to a 0 state. So let&rsquo;s try applying the quantum not gate&ndash;the X gate&ndash;to Alice&rsquo;s qubit.</p>
+<p>Since the X gate only acts on one qubit, it will flip the value of the first qubit in each ket of our Bell state, giving us</p>
+<img class="special-img-class" style="width:30%" src="https://latex.codecogs.com/svg.latex?|\psi_{x}\rangle=\frac{1}{\sqrt{2}}(|10\rangle+|01\rangle)"/>
+<p>Since addition is commutative, we can change around the terms a bit to get</p>
+<img class="special-img-class" style="width:30%" src="https://latex.codecogs.com/svg.latex?|\psi_{x}\rangle=\frac{1}{\sqrt{2}}(|01\rangle+|10\rangle)"/>
+<p>This isn&rsquo;t a necessary step, but it helps with following the process. Now, since we&rsquo;ve changed the joint state by applying the X gate to Alice&rsquo;s qubit, technically we&rsquo;re halfway there! We&rsquo;ve encoded a bit of information. But let&rsquo;s not forget our goal here: how can Bob extract this bit of information?</p>
+<p>For Bob to be able to measure anything, he&rsquo;ll need both qubits; otherwise, he only has part of an entangled state. So let&rsquo;s say Alice physically sends her qubit to Bob. (Important note: this is secure communication, since anyone who would intercept Alice&rsquo;s sent qubit would only be able to see part of an entangled state, and, like Bob, who without both qubits can&rsquo;t measure anything, they would be unable to glean information from it.) Now Bob has both qubits: what can he do to extract the bit Alice encoded?</p>
+<p>Well, if the CX gate entangled the qubits, and quantum gates are reversible, maybe we can use it again to unentangle the qubits? Let&rsquo;s give it a shot. Since in the first term, the control qubit (Alice&rsquo;s qubit and the number listed first in each ket) is a 0, the CX gate will have no effect: remember, it only flips the target qubit when the control qubit is in state |1〉. However, in the second term, the control qubit <em>is</em> in state |1〉, so we flip the target qubit (Bob&rsquo;s qubit and the number listed second in each ket). This results in the state:</p>
+<img class="special-img-class" style="width:30%" src="https://latex.codecogs.com/svg.latex?|\psi_{x}\rangle=\frac{1}{\sqrt{2}}(|01\rangle+|11\rangle)"/>
+<p>You may notice that we can now split this state up by un-distributing the tensor product: since the state of Bob&rsquo;s qubit no longer depends on Alice&rsquo;s, it can be separated out, which would give the state</p>
+<img class="special-img-class" style="width:40%" src="https://latex.codecogs.com/svg.latex?|\psi_{x}\rangle=\frac{1}{\sqrt{2}}|0\rangle+\frac{1}{\sqrt{2}}|1\rangle\otimes|1\rangle"/>
+<p>which can also be written as</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?|\psi_{x}\rangle=|+\rangle\otimes|1\rangle"/>
+<p>Hey! The second qubit ended up in the |1〉 state, which means that no matter what, when Bob measures it he&rsquo;ll get a 1! Is that the bit Alice encoded? What would have happened if she hadn&rsquo;t applied the X gate (encoding a 0 instead)?</p>
+<p>We start in the Bell State:</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|00\rangle+\frac{1}{\sqrt{2}}|11\rangle"/>
+<p>Then, after Bob gets it, we apply the CX gate giving us</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|00\rangle+\frac{1}{\sqrt{2}}|10\rangle"/>
+<p>or</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?|\psi_{x}\rangle=|+\rangle\otimes|0\rangle"/>
+<p>Yes! The second qubit is now in the |0〉 state! We did it! Ok, so Alice can encode information by choosing to apply or not apply an X gate to her qubit before sending it to Bob, and Bob can extract that information by unentangling the qubits and measuring his! Wonderful. But what about the second bit? Superdense coding promised two classical bits in a qubit, and so far we only have one!</p>
+<h3 id="relative-phase">Relative Phase</h3>
+<p>To encode the second bit, we need to talk about <strong>relative phase</strong>. Relative phase is the difference between</p>
+<img class="special-img-class" style="width:30%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|0\rangle+\frac{1}{\sqrt{2}}|1\rangle=|+\rangle"/>
+<p>and</p>
+<img class="special-img-class" style="width:30%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|0\rangle-\frac{1}{\sqrt{2}}|1\rangle=|-\rangle"/>
+<p>Let&rsquo;s take a look at our Bell state, but with the opposite relative phase:</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|00\rangle-\frac{1}{\sqrt{2}}|11\rangle"/>
+<p>Were Bob to decode this with his CX gate, he would get the joint state</p>
+<img class="special-img-class" style="width:25%" src="https://latex.codecogs.com/svg.latex?\frac{1}{\sqrt{2}}|00\rangle-\frac{1}{\sqrt{2}}|10\rangle"/>
+<p>or</p>
+<img class="special-img-class" style="width:13%" src="https://latex.codecogs.com/svg.latex?|-\rangle\otimes|0\rangle"/>
+<p>Hey! That&rsquo;s different than the previous final state we got, which was</p>
+<img class="special-img-class" style="width:13%" src="https://latex.codecogs.com/svg.latex?|+\rangle\otimes|0\rangle"/>
+<h3 id="the-second-bit">The Second Bit</h3>
+<p>If we changed something about the state, and didn&rsquo;t affect the second qubit at all, then we&rsquo;ve done it! We&rsquo;ve encoded the second bit. But how do we change the relative phase to do this encoding?</p>
+<p>The answer: we use the <a href="#z-gate">Z Gate</a>.</p>
+<p>So this means that we&rsquo;ve successfully encoded both bits of information, and we know how to extract one, but how do we extract the other? Remember, |+〉 and |-〉 both have a 50/50 change of being measured as 0 or 1, so we can&rsquo;t determine the difference between these two states with only measurement.</p>
+<p>Is there <em>some</em> way we can determine the difference?</p>
+<p>Luckily for us, the <a href="#h-gate">Hadamard Gate</a> is exactly what we need. Remember, it converts |+〉 to |0〉 and |-〉 to |1〉, allowing us to differentiate between them.</p>
+<h2 id="final-protocol">Final Protocol</h2>
+<p>Now that we have a method for encoding and decoding both of our bits, we&rsquo;ve got our final protocol for superdense coding with the Bell state:</p>
+<ul>
+<li>
+<p>Alice and Bob start with entangled qubits in the Bell State</p>
+</li>
+<li>
+<p>Alice encode her desired two-bit message:</p>
+<ul>
+<li>00: no gates</li>
+<li>01: X gate</li>
+<li>10: Z gate</li>
+<li>11: Z and X gates</li>
+</ul>
+</li>
+<li>
+<p>Alice physically sends her qubit to Bob</p>
+</li>
+<li>
+<p>Bob applies a CX gate on his qubit, using Alice’s qubit as a control, storing the second encoded bit in his qubit</p>
+</li>
+<li>
+<p>Bob applies a Hadamard gate to Alice’s qubit, converting it either from |+⟩ to |0⟩ or from |–⟩ to |1⟩, decoding the first encoded bit</p>
+</li>
+<li>
+<p>Bob measures both qubits</p>
+<p>Since all qubits are in classical states at the time of measurement, Bob is guaranteed to get the correct results: Alice’s encoded message! There is no tricky quantum randomness that affects the measurement!</p>
+</li>
+</ul>
+<p>Our final circuit looks like this:</p>
+<p><img class="special-img-class" style="width:65%" src="/images/circuit-kusj4c2t.png" /></p>
+<p>The gates used to encode information would be inserted between the two CX gates.</p>
+<h1 id="my-research-a-namemy-researcha">My Research <a name="my-research"></a></h1>
+<p>Haha jk more background first :))</p>
+<h2 id="higher-qubit-entangled-states">Higher Qubit Entangled States</h2>
+<p>The Bell state is what is known as the maximally entangled state for two qubits. For entangled states with more qubits, there are different kinds of maximal entanglement that can be produced. For example, for three qubits, there are two maximally entangled states, each of which cannot be transformed into the other through unitary gates.</p>
+<h3 id="the-ghz-state">The GHZ State</h3>
+<p>The first, the GHZ state, is based on the Bell state. The circuit used to create it is very similar:</p>
+<img class="special-img-class" style="width:65%" src="/images/circuitGHZ.png"/>
+<p>and the state itself is a clear extension of the Bell state:</p>
+<img class="special-img-class" style="width:35%" src="https://latex.codecogs.com/svg.latex?|\psi_{GHZ}\rangle=\frac{|000\rangle+|111\rangle}{\sqrt{2}}"/>
+<p>It&rsquo;s almost entirely the same, but with an extra qubit in each ket. This also is easily generalized to even higher qubit entanglement: to create the state with one more entangled qubit, simply add another CX Gate, chaining that qubit into the entanglement and adding another number to each of the kets. For example, the 4 qubit GHZ state would be</p>
+<img class="special-img-class" style="width:40%" src="https://latex.codecogs.com/svg.latex?|\psi_{GHZ4}\rangle=\frac{|0000\rangle+|1111\rangle}{\sqrt{2}}"/>
+<h3 id="the-w-state">The W State</h3>
+<p>The other maximally entangled three qubit state is called the W state. It is based on the joint state created by applying an X gate to the first qubit of the Bell state</p>
+<img class="special-img-class" style="width:35%" src="https://latex.codecogs.com/svg.latex?X|\psi_{BELL}\rangle=\frac{|10\rangle+|01\rangle}{\sqrt{2}}"/>
+<p>and looks like this:</p>
+<img class="special-img-class" style="width:45%" src="https://latex.codecogs.com/svg.latex?|\psi_{W}\rangle=\frac{|100\rangle+|010\rangle+|001\rangle}{\sqrt{2}}"/>
+<p>The W state can also be generalized to higher qubit states, but it&rsquo;s a little trickier. Each added qubit adds a term to the numerator: for example, the four qubit W state would be</p>
+<img class="special-img-class" style="width:60%" src="https://latex.codecogs.com/svg.latex?|\psi_{W4}\rangle=\frac{|1000\rangle+|0100\rangle+|0010\rangle+|0001\rangle}{\sqrt{2}}"/>
+<p>The circuit used to create the W state is significantly more complex than that used to create the GHZ state. It requires precise rotations based on an inverse cosine function, which is a function notably lacking from IBM&rsquo;s quantum circuit coding script, OpenQASM, and uses a controlled Hadamard gate:</p>
+<img class="special-img-class" style="width:75%" src="/images/circuitW.png"/>
+Where ϕ3 is 
+<img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?2\arccos(\frac{1}{\sqrt{3}})"/>
+<p>This makes using the W state significantly more difficult than using the GHZ state.</p>
+<h2 id="super-denser-coding">Super-denser Coding</h2>
+<p>The goal of my research is to make use of 5 qubit entangled states and the concepts of superdense coding to store 5 classical bits in a single qubit.</p>
+<p>I will then use these 5 classical bits to represent 1 of the 32 characters</p>
+<p>[<small>abcdefghijklmnopqrstuvwxyz ,&quot;.!?</small>]</p>
+<p>and develop a small secure communication test that sends one character at a time, encoded in a single qubit.</p>
+<p>Finally, I plan to run this basic version of secure communication on IBM&rsquo;s 5 qubit qauntum computers, and analyze the amount of error in the decoded messages.</p>
+<h1 id="sources-a-namesourcesa">Sources <a name="sources"></a></h1>
+<div style="text-indent: -36px; padding-left: 36px;">
+<p><em>Learn quantum computing on brilliant.</em> Brilliant. (n.d.). Retrieved October 15, 2021, from <a href="https://brilliant.org/courses/quantum-computing/">https://brilliant.org/courses/quantum-computing/</a>.</p>
+<p><em>Operations glossary.</em> IBM Quantum. (n.d.). Retrieved October 15, 2021, from <a href="https://quantum-computing.ibm.com/composer/docs/iqx/operations_glossary">https://quantum-computing.ibm.com/composer/docs/iqx/operations_glossary</a>.</p>
+</div>
+<hr><ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/dense-encoding" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">dense encoding</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/secure-communication" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">secure communication</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/quantum" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">quantum</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/projects/mdwqcnn/">Melanoma Detection with Quantum Convolutional Neural Networks</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://8-bit-confusion.github.io" >
+    &copy;  Lily Wasko 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+<a href="https://github.com/8-bit-confusion" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

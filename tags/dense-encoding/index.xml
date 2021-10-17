@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dense encoding on Lily Wasko</title>
+    <link>https://8-bit-confusion.github.io/tags/dense-encoding/</link>
+    <description>Recent content in dense encoding on Lily Wasko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/tags/dense-encoding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secure Communication Using Superdense Coding of the GHZ 5 State</title>
+      <link>https://8-bit-confusion.github.io/projects/qsdc-comm/</link>
+      <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/projects/qsdc-comm/</guid>
+      <description>View this project&amp;rsquo;s code on GitHub :)
+Background  Quantum Computing  Qubits  The most basic unit of information in classical computing is the bit. It stores a value either of 0 or 1, which represent the presense or absense of electrons in a transistor.
+In quantum computing, however, the most basic unit of information is the qubit. A qubit, like a bit, can store either 0 or 1, but it also has the unique ability to store a value that is both 0 and 1: a superposition state.</description>
+    </item>
+    
+  </channel>
+</rss>
