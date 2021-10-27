@@ -40,7 +40,7 @@
 <meta itemprop="name" content="Secure Communication Using Superdense Coding of the GHZ 5 State">
 <meta itemprop="description" content="Senior year research"><meta itemprop="datePublished" content="2021-10-06T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2021-10-06T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="3368">
+<meta itemprop="wordCount" content="3383">
 <meta itemprop="keywords" content="dense encoding,secure communication,quantum," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Secure Communication Using Superdense Coding of the GHZ 5 State"/>
 <meta name="twitter:description" content="Senior year research"/>
@@ -84,8 +84,20 @@
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/progress-reports/" title="Progress Reports page">
+              Progress Reports
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/projects/" title="Projects page">
               Projects
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/sources/" title="Sources page">
+              Sources
             </a>
           </li>
           
@@ -348,7 +360,6 @@ The final single-qubit quantum gate that will be mentioned here is the <strong>Z
 <p><img class="special-img-class" style="width:65%" src="/images/circuit-kusj4c2t.png" /></p>
 <p>The gates used to encode information would be inserted between the two CX gates.</p>
 <h1 id="my-research-a-namemy-researcha">My Research <a name="my-research"></a></h1>
-<p>Haha jk more background first :))</p>
 <h2 id="higher-qubit-entangled-states">Higher Qubit Entangled States</h2>
 <p>The Bell state is what is known as the maximally entangled state for two qubits. For entangled states with more qubits, there are different kinds of maximal entanglement that can be produced. For example, for three qubits, there are two maximally entangled states, each of which cannot be transformed into the other through unitary gates.</p>
 <h3 id="the-ghz-state">The GHZ State</h3>
@@ -370,16 +381,19 @@ The final single-qubit quantum gate that will be mentioned here is the <strong>Z
 Where ϕ3 is 
 <img class="special-img-class" style="width:20%" src="https://latex.codecogs.com/svg.latex?2\arccos(\frac{1}{\sqrt{3}})"/>
 <p>This makes using the W state significantly more difficult than using the GHZ state.</p>
-<h2 id="super-denser-coding">Super-denser Coding</h2>
-<p>The goal of my research is to make use of 5 qubit entangled states and the concepts of superdense coding to store 5 classical bits in a single qubit.</p>
+<h2 id="reseach-goals-a-nameresearch-goalsa">Reseach Goals <a name="research-goals"></a></h2>
+<p>The goal of my research is to make use of the 5 qubit composite GHZ-Bell state</p>
+<img class="special-img-class" style="width:40%" src="https://latex.codecogs.com/svg.latex?\frac{|000\rangle+|111\rangle}{\sqrt{2}}\otimes\frac{|00\rangle+|11\rangle}{\sqrt{2}}"/>
+<p>to store 5 classical bits in three qubits.</p>
 <p>I will then use these 5 classical bits to represent 1 of the 32 characters</p>
 <p>[<small>abcdefghijklmnopqrstuvwxyz ,&quot;.!?</small>]</p>
-<p>and develop a small secure communication test that sends one character at a time, encoded in a single qubit.</p>
+<p>and develop a small secure communication test that sends one character at a time, encoded in the three qubits.</p>
 <p>Finally, I plan to run this basic version of secure communication on IBM&rsquo;s 5 qubit qauntum computers, and analyze the amount of error in the decoded messages.</p>
 <h1 id="sources-a-namesourcesa">Sources <a name="sources"></a></h1>
 <div style="text-indent: -36px; padding-left: 36px;">
 <p><em>Learn quantum computing on brilliant.</em> Brilliant. (n.d.). Retrieved October 15, 2021, from <a href="https://brilliant.org/courses/quantum-computing/">https://brilliant.org/courses/quantum-computing/</a>.</p>
 <p><em>Operations glossary.</em> IBM Quantum. (n.d.). Retrieved October 15, 2021, from <a href="https://quantum-computing.ibm.com/composer/docs/iqx/operations_glossary">https://quantum-computing.ibm.com/composer/docs/iqx/operations_glossary</a>.</p>
+<p>Saha, D., &amp; Panigrahi, P. K. (2011). N-qubit quantum teleportation, information splitting and superdense coding through the composite ghz–bell channel. <em>Quantum Information Processing, 11</em>(2), 615–628. <a href="https://doi.org/10.1007/s11128-011-0270-x">https://doi.org/10.1007/s11128-011-0270-x</a></p>
 </div>
 <hr><ul class="pa0">
   

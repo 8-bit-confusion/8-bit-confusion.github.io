@@ -6,7 +6,37 @@
     <description>Recent content in dense encoding on Lily Wasko</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/tags/dense-encoding/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/tags/dense-encoding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Progress Report 01 - 10/25/2021</title>
+      <link>https://8-bit-confusion.github.io/progress-reports/10-25-2021/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/progress-reports/10-25-2021/</guid>
+      <description>Slight update to research plan based on research paper
+N-qubit quantum teleportation, information splitting and superdense coding through the composite GHZ–Bell channel
+by Debashis Saha and Prasanta K. Panigrahi:
+Since N+1 qubits must be acted on in order to encode 2N + 1 classical bits, the pure GHZ 5 state is useless for superdense coding, and is being abandoned for the secure communication demo in favor of the composite GHZ-Bell state outlined in the research above.</description>
+    </item>
+    
+    <item>
+      <title>Relevant details from &#39;N-qubit ... superdense coding through the composite GHZ–Bell channel&#39;</title>
+      <link>https://8-bit-confusion.github.io/sources/d-saha-and-p-panigrah/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/sources/d-saha-and-p-panigrah/</guid>
+      <description>This source is relevant to Secure Communication with GHZ 5.</description>
+    </item>
+    
+    <item>
+      <title>Relevant details from Brilliant</title>
+      <link>https://8-bit-confusion.github.io/sources/brilliant/</link>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/sources/brilliant/</guid>
+      <description>This source is relevant to Secure Communication with GHZ 5.</description>
+    </item>
+    
     <item>
       <title>Secure Communication Using Superdense Coding of the GHZ 5 State</title>
       <link>https://8-bit-confusion.github.io/projects/qsdc-comm/</link>
