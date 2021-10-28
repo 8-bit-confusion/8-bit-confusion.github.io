@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Melanoma Detection with Quantum Convolutional Neural Networks | Lily Wasko</title>
+<meta name="keywords" content="images, melanoma, quantum" />
+<meta name="description" content="Junior year research">
+<meta name="author" content="Lily Wasko">
+<link rel="canonical" href="https://8-bit-confusion.github.io/en/projects/mdwqcnn/" />
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://8-bit-confusion.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://8-bit-confusion.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://8-bit-confusion.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://8-bit-confusion.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://8-bit-confusion.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<meta name="generator" content="Hugo 0.83.1" />
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="Melanoma Detection with Quantum Convolutional Neural Networks" />
+<meta property="og:description" content="Junior year research" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://8-bit-confusion.github.io/en/projects/mdwqcnn/" /><meta property="article:section" content="en" />
+<meta property="article:published_time" content="2021-06-13T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-06-13T00:00:00&#43;00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Melanoma Detection with Quantum Convolutional Neural Networks"/>
+<meta name="twitter:description" content="Junior year research"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Ens",
+      "item": "https://8-bit-confusion.github.io/en/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  3 ,
+      "name": "Projects",
+      "item": "https://8-bit-confusion.github.io/en/projects/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  4 ,
+      "name": "Melanoma Detection with Quantum Convolutional Neural Networks",
+      "item": "https://8-bit-confusion.github.io/en/projects/mdwqcnn/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Melanoma Detection with Quantum Convolutional Neural Networks",
+  "name": "Melanoma Detection with Quantum Convolutional Neural Networks",
+  "description": "Junior year research",
+  "keywords": [
+    "images", "melanoma", "quantum"
+  ],
+  "articleBody": "View this project’s code on GitHub :)\nBackground  Melanoma  Melanoma is a deadly skin cancer. Out of all skin lesions,it is especially dangerous because it is outnumbered by other skin lesions, and it is difficult to identify. However, melanoma is best treated when caught early, so treatment relies on rapid identification.\nAccording to the Skin Cancer Foundation, an estimated 7,180 people will die from melanoma in 2021 alone.\nMachine Learning  Machine learning has been a successful tool for diagnosing other diseases from medical images. Many research groups have achieved high rates of accuracy, including algorithms outlined in the following papers:\n Mohammed et al., 2018 Kang et al., 2017 Lui \u0026 Kang, 2017  Machine learning algorithms have even already shown promise at the task of identifying melanoma. Hosny et al. (2019) achieved an accuracy of 95.91% on a dataset similar to that used in this research.\nAlmost all of these papers used some form of Convolutional Neural Network, or CNN, as it is generally considered the best algorithm for image recognition. CNNs are good at rapidly learning patterns in image data, making them a logical choice for this task.\nHowever, a relatively new algorithm also shows significant promise at image recognition:\nThe QCNN  Note: for an explanation of quantum computing, see the Quantum Computing section in the Superdense Coding project.\nThe QCNN is a relatively new proposed structure for neural networks that takes advantage of quantum computing. As of the last time I checked, only one article has been published that uses a QCNN for image recognition, and no researchers have attempted to use if for melanoma identification thus far.\nStructure  There are two main structures of quantum convolutional neural network, or QCNN:\n a combined classical / quantum network a purely quantum model  Both are similar in structure to a CNN.\nThe first replaces the first convolutional layer of a CNN with one or more quantum circuits. If more than one quantum circuit is used, the outputs are combined using a fully connected layer. The rest of the algorithm, however, is identical to a CNN.\nImage from Henderson et al., 2020 The second is entirely quantum, and is composed of a series of quantum circuits designed to replicate the functionality of the layers of a CNN.\nImage from Cong et al., 2019 The advantage of the QCNN is that theoretically, it can handle much larger data inputs and still process faster due to a much lower complexity than traditional models.\nHowever, this isn’t currently the case. Modern quantum computers are still in development, and aren’t big enough to compete with classical ones yet.\nThe Image Size Problem  The largest quantum computer available through IBM is only 15 qubits, and since every pixel of a grey-scale input image would be one qubit, training on large input data is not feasible.\nThe solution to this problem employed in this research was to use the first QCNN structure. This allows the quantum circuit to be used much like a convolutional filter, sweeping over the image and only needing to compute with a couple inputs at a time.\nFilter Circuits  Image based on a design from Oh et al., 2020 This is a simplistic quantum filter circuit.\nEach of the RX gates in the column on the left has a variable rotation, and together they act as an encoder. They allow classical values to be turned into quantum information by rotating a qubit an amount based on the classical value.\nEach pair of controlled RZ and controlled RX gates acts as a pooling segment. The rotation of each gate is tunable, allowing the filter to be adjusted over the course of the learning process, and the fact that it has a control (marked by a small circle at the end of a line) on another qubit means that information is being mapped from all 9 initial qubits down to just one, which is measured at the end of the circuit.\nThis measurement returns a classical value which can then be used by the rest of the model.\nThe Quantum Advantage: Complexity  While the quantum computers of today cannot yet perform to their full theoretical potential, they still have a demonstrable advantage over classical computers in terms of complexity.\n Image by me The classical CNN filter has a complexity of O(n2). This means that the upper bound of the number of computations it performs grows as the square of the input size. In this case, the input size, n, is 3. This is the length of one side of the filter area. 9 computations are required for every element of the filter to be multiplied by the corresponding element of the image under the filter.\nImage based on a design from Oh et al., 2020 The simple quantum filter circuit shown here has a complexity depth of O(⌈log2(n2)⌉)*. This filter has an input size n of 2. The 2 by 2 area is flattened into a 4 by 1 matrix, which is input into the quantum circuit. The depth of the circuit is defined as the number of columns of gates. In this case, there are 6.\nHowever, in complexity, we ignore both constants and numerical coefficients. Since the measurement column at the end and the encoder column at the beginning will both always be one depth, we disregard them. Additionally, each pooling segment will have a depth of 2, regardless of the input size, so we disregard that coefficient as well, leaving us with a complexity depth of 2 for an input size n of 2.\nThis aligns with the complexity depth of O(⌈log2(n2)⌉), as 22 is 4, log2(4) is 2, and ⌈2⌉ is 2.\n*ceiling function denoted ⌈ ⌉ Image created by me, using Desmos As you can see from the graphs of n2 in green and ⌈log2(n2)⌉ in purple, the complexity of the quantum filter grows much less quickly in relation to the input size than the classical filter does.\nMy Research  My goal over the course of my junior year was to create an adaptation of the first QCNN structure that could handle large image inputs. I planned to analyze the performance of the network on multiple test datasets, and compare it’s performance to the accuracies achieved by other networks, and the complexity of those networks.\nThe dataset I am using to train my network is the 512x512 combined melanoma dataset.\nQuantum filter  The quantum filter used in my network is more intricate than those shown previously, but it functions in much the same way.\nSegment One  The first segment is an encoder. However, rather than encoding classical information by rotating only one qubit on its x axis, as the encoder of the simpler circuit did, it performs a rotation on two qubits simultaneously, and acts on all three axes of rotation.\nSegment Two  The second segment is also a part of the encoder, though it may look different. Each piece of the encoder looks like this: and encodes information onto two adjacent qubits. The first block of segment one encodes qubit pairs 0\u00261, 2\u00263, 4\u00265, and 6\u00267. The second block encodes pairs 1\u00262, 3\u00264, 5\u00266, and 7\u00268.\nHowever, this only accounts for 8 of the 9 classical inputs, and only 8 of the 9 possible adjacent pairs. The final pair is 8\u00260. Segment two is simply the encoder piece for the 8\u00260 pair, and the final portion of the encoder.\nSegment Three  The third segment is the pooling segment. Like the encoder, it works much the same as the pooling segment of the simpler quantum circuit, but rather than just performing a rotation on the x and z axes, it uses rotations on all three axes, and a controlled not gate to pool the information.\nThe pooling segment combines the data from all of the qubits down to a single qubit, which is measured at the end of the circuit. The first column pools qubits 1-8 down to qubits 2, 4, 6, and 8. The second column pools those qubits to just 4 and 8. The thirds pools 4 and 8 to qubit 8, and the final column pools qubit 0 down to qubit 8 as well. Qubit 8 is then measured to obtain a single classical value as the result of the entire circuit.\nComplexity  While it may seem like this filter circuit design would be far more complex than the simple filter circuit shown previously, it actually has the same complexity.\nThe encoding segment will always have either 34 or 51 depths. In the case of an input size of 3 (3x3 square, 9 total inputs), it will have 51. However, since this value alternates but will never increase beyond 51 as the input increases, it can be ignored in the complexity function.\nThe pooling segment also seem to have increased in complexity, but all that has changed is the depth of each section has gone from 2 to 7. We can represent the depth of each section of the pooling segment as L. For any given circuit, the value of L won’t change with a change in input size: only the number of sections required in the pooling segment will. Therefore, we can also remove the numerical coefficient L.\nWe are left with the same complexity depth as the simpler circuit: O(⌈log2(n2)⌉)\nNetwork Structure  I am using a tensorflow Keras sequential framework for my algorithm.\nmodel = tf.keras.Sequential()  The first layer is my custom quantum layer.\nmodel.add(qconv_64x64_trainable(image_to_circuit, add_pooling))  Next, there are 2 sets of two dimensional convolutional layers and two dimensional pooling layers.\nmodel.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu', input_shape=[61, 61])) model.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2)) model.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu')) model.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))  The data is then flattened.\nmodel.add(tf.keras.layers.Flatten())  The network ends with a four-layer fully connected network with a binary output neuron.\nmodel.add(tf.keras.layers.Dense(units=256, activation='relu')) model.add(tf.keras.layers.Dense(units=256, activation='relu')) model.add(tf.keras.layers.Dense(units=256, activation='relu')) model.add(tf.keras.layers.Dense(units=256, activation='relu')) model.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))  The Custom Quantum Layer  This is the code for the custom quantum layer in my network:\nclass qconv_64x64_trainable (tf.keras.layers.Layer): def __init__(self, encoder, pooler): super(qconv_64x64_trainable, self).__init__() self.encode_data = encoder self.pool = pooler self.simulator = qsimcirq.QSimSimulator() def build(self, input_shape): self.kernel = self.add_weight(\"kernel\", shape=[100,1]) def call(self, input): tf.compat.v1.enable_eager_execution() print(tf.executing_eagerly()) result = np.empty([61,61]) for j in prange(0,input.shape[1]-3): for i in prange(0,input.shape[0]-3): print('input:',input,input.numpy()) image_segment = input[0][j:j+4,i:i+4] iss_encoded_data = self.encode_data(image_segment) tbt_cirq_full = self.pool(iss_encoded_data, [self.kernel[i].numpy()[0] for i in range(90)]) res = self.simulator.run(tbt_cirq_full).data.iat[0,0] result[j,i] = res return np.array([[result]])  Let’s go over it in a bit more detail.\nThe custom layer has three functions, based on the tensorflow Keras layer structure:\nThe init function Almost all python classes have this function. This just sets up the object, and saves any constructor variables to the object.\ndef __init__(self, encoder, pooler): super(qconv_64x64_trainable, self).__init__() self.encode_data = encoder self.pool = pooler self.simulator = qsimcirq.QSimSimulator()  The first part of the __init__ function gets the superclass, which is the tensorflow Keras layer, and initializes it.\nsuper(qconv_64x64_trainable, self).__init__()  Next, the variables passed when the object is initialized are stored. In this case, the variables encoder and pooler are stored to the object.\nself.encode_data = encoder self.pool = pooler  Finally, the simulator that will be used to compute the quantum circuit results is created. This uses the qsimcirq package, which is built for simulating large quantum circuits.\nself.simulator = qsimcirq.QSimSimulator()  The build function def build(self, input_shape): self.kernel = self.add_weight(\"kernel\", shape=[100,1])  This one is a little simpler. The build function is called when the network is compiled, right before it is trained. It creates the layer’s kernel. This is the filter that passes over the image in a normal convolutional layer (see this gif). In the gif, the kernel has the shape [3,3]. However, in the custom layer, the kernel is initialized with the rather unusual shape [100,1], for reasons that will be explained in the next section.\nThe call function def call(self, input): tf.compat.v1.enable_eager_execution() print(tf.executing_eagerly()) result = np.empty([61,61]) for j in range(0,input.shape[1]-3): for i in range(0,input.shape[0]-3): print('input:',input,input.numpy()) image_segment = input[0][j:j+4,i:i+4] iss_encoded_data = self.encode_data(image_segment) tbt_cirq_full = self.pool(iss_encoded_data, [self.kernel[i].numpy()[0] for i in range(90)]) res = self.simulator.run(tbt_cirq_full).data.iat[0,0] result[j,i] = res return np.array([[result]])  This is the big one. The call function is called every time an image passes through the layer. In a normal layer, it would be a fast, simple computation: the output would simply be the matrix multiplication of the input image and the kernel. However, this layer works a little differently.\nFirst, we check to make sure that tensorflow is executing eagerly. This is because we want to be able to access the values of our tensors during this step, and we can only do this during eager execution. However, this doesn’t NOT need to be checked for every call, so this is an inefficiency in the current code.\ntf.compat.v1.enable_eager_execution() print(tf.executing_eagerly())  Next, we create an empty array to store our output in. Since we know that the input images will be scaled down to 64 by 64, and the size of the quantum kernel we will be using is 4 by 4, we know that the output will be 61 by 61, since there will be a strip of three pixels on the bottom and right edges of the input that the kernel cannot begin on, since some part of it would extend past the image.\nresult = np.empty([61,61])  These for loops loop through every pixel in the input image, besides those in the strips mentioned above.\nfor j in range(0,input.shape[1]-3): for i in range(0,input.shape[0]-3):  Within each for loop, we do a number of things.\nprint('input:',input,input.numpy()) image_segment = input[0][j:j+4,i:i+4] iss_encoded_data = self.encode_data(image_segment) tbt_cirq_full = self.pool(iss_encoded_data, [self.kernel[i].numpy()[0] for i in range(90)]) res = self.simulator.run(tbt_cirq_full).data.iat[0,0] result[j,i] = res    Print the entire input, and the numpy array version of the input. This was another check for eager execution, as the numpy array would be inaccessible unless tensorflow were executing eagerly, but it should not be happening for every pixel.\n  Identify the segment of the of the image that the filter is looking at.\n  Encode the data. This is segments one and two of the filter circuit. The function that constructs this portion of the filter circuit is passed as the encoder in the __init__ function.\n  Construct the full circuit. This adds segment three to the circuit. The function that builds the pooling segment off of the encoder segment is passed as the pooler in the __init__ function.\nThis is why we have such an oddly shaped kernel. Since, when the network is training, tensorflow automatically adjust the waits of the kernel, we are using the values of the kernel as the rotations for the adjustable gates in the quantum circuit. This way, the quantum circuit is automatically trained to work best with the dataset.\n  Simulate the circuit. This is done using the qsimcirq module.\n  Add the result of the circuit to the proper location in the output array.\n  Finally, outside the for loops, the array of results is returned and passed to the next portion of the network.\nreturn np.array([[result]])  Results and Plans  Unfortunately, accuracy data could not be collected for the hybrid model that was designed in this research. The way the filter circuits are being implemented is incredibly inefficient. The entire circuit is built with different rotation values for the gates, then sent to a quantum computer and run, for every pixel of every image in the dataset. This makes training the network, even on an incredibly limited subset of the dataset, take such a long time as to render the algorithm useless.\nOver the course of my senior year, this project will be revisited. I plan to rewrite much of the code, as well as work with experts in the quantum computing field to optimize the process by which I create the quantum circuits.\nSources  Cong, I., Choi, S., \u0026 Lukin, M. (2018) Quantum convolutional neural networks. ArXiv. https://arxiv.org/pdf/1810.03787.pdf\nHenderson, M., Shakya, S., Pradhan, S., \u0026 Cook, T. (2020). Quanvolutional neural networks: Powering image recognition with quantum circuits. Quantum Machine Intelligence 2(1), https://doi.org/10.1007/s42484-020-00012-y\nHosny, K. M., Kassem, M. A., \u0026 Foaud, M. M. (2019). Classification of skin lesions using transfer learning and augmentation with Alex-net. PloS one, 14(5), e0217293. https://doi.org/10.1371/journal.pone.0217293\nKang, G., \u0026 Lui, K., Hou, B., \u0026 Zhang, N. (2017). 3D multi-view convolutional neural networks for lung nodule classification. PLoS ONE, 12(11). https://doi.org/10.1371/journal.pone.0188290\nKerenidis, I., Landman, J., \u0026 Prakash, A. (2019). Quantum algorithms for deep convolutional neural networks. ArXiv. https://arxiv.org/pdf/1911.01117.pdf\nLucas, C. R., Sanders, L. L., Murray, J. C., Myers, S. A., Hall, R. P., \u0026 Grichnik, J. M. (2003). Early melanoma detection: Nonuniform dermoscopic features and growth. Journal of the American Academy of Dermatology, 48(5). https://doi.org/10.1067/mjd.2003.283\nLui, K., \u0026 Kang, G. (2017). Multiview convolutional neural networks for lung nodule classification. International Journal of Imaging Systems and Technology, 27. https://doi.org/10.1002/ima.22206\nMohammed, M. A., Al-Khateeb, B., Rashid, A. N., Ibrahim, D. A., Ghani, M. K. A., \u0026 Mostafa, S. A. (2018). Neural network and multi-fractal dimension features for breast cancer classification from ultrasound images. Computers \u0026 Electrical Engineering, 70. https://doi.org/10.1016/j.compeleceng.2018.01.033\nOh S., Choi, J., \u0026 Kim, J. (2020). A Tutorial on Quantum Convolutional Neural Networks (QCNN). https://arxiv.org/pdf/2009.09423.pdf\nSaha, S. (2018, December 17). A comprehensive guide to convolutional neural networks - the eli5 way. https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53.\nSwetter, S. M., \u0026 Geller, A. C. (2014). Perspective: Catch melanoma early. Nature, 515. https://doi.org/10.1038/515S117a\n ",
+  "wordCount" : "2838",
+  "inLanguage": "en",
+  "datePublished": "2021-06-13T00:00:00Z",
+  "dateModified": "2021-06-13T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Lily Wasko"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://8-bit-confusion.github.io/en/projects/mdwqcnn/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Lily Wasko",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://8-bit-confusion.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://8-bit-confusion.github.io" accesskey="h" title="Lily Wasko (Alt + H)">Lily Wasko</a>
+            <span class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://8-bit-confusion.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://8-bit-confusion.github.io/en/projects/" title="Projects">
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://8-bit-confusion.github.io/progress-reports" title="Progress Reports">
+                    <span>Progress Reports</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://8-bit-confusion.github.io/sources/" title="Sources">
+                    <span>Sources</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Melanoma Detection with Quantum Convolutional Neural Networks
+    </h1>
+    <div class="post-description">
+      Junior year research
+    </div>
+    <div class="post-meta">June 13, 2021&nbsp;·&nbsp;Lily Wasko
+
+</div>
+  </header> 
+  <div class="post-content"><p><a href="https://github.com/8-bit-confusion/quantum-melanoma-identification" title="quantum-melanoma-identification">View this project&rsquo;s code on GitHub</a> :)</p>
+<h1 id="background-a-namebackgrounda">Background <a name="background"></a><a hidden class="anchor" aria-hidden="true" href="#background-a-namebackgrounda">#</a></h1>
+<h2 id="melanoma-a-namemelanomaa">Melanoma <a name="melanoma"></a><a hidden class="anchor" aria-hidden="true" href="#melanoma-a-namemelanomaa">#</a></h2>
+<p>Melanoma is a deadly skin cancer. Out of all skin lesions,it is especially dangerous because it is outnumbered by other skin lesions, and it is difficult to identify. However, melanoma is best treated when caught early, so treatment relies on rapid identification.</p>
+<p>According to the <a href="https://www.skincancer.org/skin-cancer-information/skin-cancer-facts/#melanoma">Skin Cancer Foundation</a>, an estimated 7,180 people will die from melanoma in 2021 alone.</p>
+<h2 id="machine-learning-a-namemachine-learninga">Machine Learning <a name="machine-learning"></a><a hidden class="anchor" aria-hidden="true" href="#machine-learning-a-namemachine-learninga">#</a></h2>
+<p>Machine learning has been a successful tool for diagnosing other diseases from medical images. Many research groups have achieved high rates of accuracy, including algorithms outlined in the following papers:</p>
+<ul>
+<li><a href="https://doi.org/10.1016/j.compeleceng.2018.01.033">Mohammed et al., 2018</a></li>
+<li><a href="https://doi.org/10.1371/journal.pone.0188290">Kang et al., 2017</a></li>
+<li><a href="https://doi.org/10.1002/ima.22206">Lui &amp; Kang, 2017</a></li>
+</ul>
+<p>Machine learning algorithms have even already shown promise at the task of identifying melanoma. <a href="https://doi.org/10.1371/journal.pone.0217293">Hosny et al. (2019)</a> achieved an accuracy of 95.91% on a dataset similar to that used in this research.</p>
+<p>Almost all of these papers used some form of Convolutional Neural Network, or CNN, as it is generally considered the best algorithm for image recognition. CNNs are good at rapidly learning patterns in image data, making them a logical choice for this task.</p>
+<p>However, a relatively new algorithm also shows significant promise at image recognition:</p>
+<h2 id="the-qcnn-a-nameqcnna">The QCNN <a name="qcnn"></a><a hidden class="anchor" aria-hidden="true" href="#the-qcnn-a-nameqcnna">#</a></h2>
+<p>Note: for an explanation of quantum computing, see the <a href="/projects/qsdc-comm#quantum-computing">Quantum Computing</a> section in the Superdense Coding project.</p>
+<p>The QCNN is a relatively new proposed structure for neural networks that takes advantage of quantum computing. As of the last time I checked, only one article has been published that uses a QCNN for image recognition, and no researchers have attempted to use if for melanoma identification thus far.</p>
+<h3 id="structure-a-nameqcnn-structurea">Structure <a name="qcnn-structure"></a><a hidden class="anchor" aria-hidden="true" href="#structure-a-nameqcnn-structurea">#</a></h3>
+<p>There are two main structures of quantum convolutional neural network, or QCNN:</p>
+<ul>
+<li>a combined classical / quantum network</li>
+<li>a purely quantum model</li>
+</ul>
+<p>Both are similar in structure to a CNN.</p>
+<p>The first replaces the first convolutional layer of a CNN with one or more quantum circuits. If more than one quantum circuit is used, the outputs are combined using a fully connected layer. The rest of the algorithm, however, is identical to a CNN.</p>
+<p><img loading="lazy" src="/images/qcnn_struc_1.png" alt="Structure One"  />
+</p>
+<h4 id="image-from-henderson-et-al-2020httpsdoiorg101007s42484-020-00012-y">Image from <a href="https://doi.org/10.1007/s42484-020-00012-y">Henderson et al., 2020</a><a hidden class="anchor" aria-hidden="true" href="#image-from-henderson-et-al-2020httpsdoiorg101007s42484-020-00012-y">#</a></h4>
+<p>The second is entirely quantum, and is composed of a series of quantum circuits designed to replicate the functionality of the layers of a CNN.</p>
+<p><img loading="lazy" src="/images/qcnn_struc_2.png" alt="Structure Two"  />
+</p>
+<h4 id="image-from-cong-et-al-2019httpsarxivorgpdf181003787pdf">Image from <a href="https://arxiv.org/pdf/1810.03787.pdf">Cong et al., 2019</a><a hidden class="anchor" aria-hidden="true" href="#image-from-cong-et-al-2019httpsarxivorgpdf181003787pdf">#</a></h4>
+<p>The advantage of the QCNN is that theoretically, it can handle much larger data inputs and still process faster due to a much lower complexity than traditional models.</p>
+<p>However, this isn&rsquo;t currently the case. Modern quantum computers are still in development, and aren&rsquo;t big enough to compete with classical ones yet.</p>
+<h3 id="the-image-size-problem-a-nameqcnn-image-size-problema">The Image Size Problem <a name="qcnn-image-size-problem"></a><a hidden class="anchor" aria-hidden="true" href="#the-image-size-problem-a-nameqcnn-image-size-problema">#</a></h3>
+<p>The largest quantum computer available through IBM is only 15 qubits, and since every pixel of a grey-scale input image would be one qubit, training on large input data is not feasible.</p>
+<p>The solution to this problem employed in this research was to use the first QCNN structure. This allows the quantum circuit to be used much like a convolutional filter, sweeping over the image and only needing to compute with a couple inputs at a time.</p>
+<h3 id="filter-circuits-a-nameqcnn-filter-circuitsa">Filter Circuits <a name="qcnn-filter-circuits"></a><a hidden class="anchor" aria-hidden="true" href="#filter-circuits-a-nameqcnn-filter-circuitsa">#</a></h3>
+<p><img loading="lazy" src="/images/filter_circuit_1.png" alt="Basic Filter Circuit"  />
+</p>
+<h4 id="image-based-on-a-design-from-oh-et-al-2020httpsarxivorgpdf200909423pdf">Image based on a design from <a href="https://arxiv.org/pdf/2009.09423.pdf">Oh et al., 2020</a><a hidden class="anchor" aria-hidden="true" href="#image-based-on-a-design-from-oh-et-al-2020httpsarxivorgpdf200909423pdf">#</a></h4>
+<p>This is a simplistic quantum filter circuit.</p>
+<p>Each of the RX gates in the column on the left has a variable rotation, and together they act as an encoder. They allow classical values to be turned into quantum information by rotating a qubit an amount based on the classical value.</p>
+<p>Each pair of controlled RZ and controlled RX gates acts as a pooling segment. The rotation of each gate is tunable, allowing the filter to be adjusted over the course of the learning process, and the fact that it has a control (marked by a small circle at the end of a line) on another qubit means that information is being mapped from all 9 initial qubits down to just one, which is measured at the end of the circuit.</p>
+<p>This measurement returns a classical value which can then be used by the rest of the model.</p>
+<h2 id="the-quantum-advantage-complexity-a-namecomplexitya">The Quantum Advantage: Complexity <a name="complexity"></a><a hidden class="anchor" aria-hidden="true" href="#the-quantum-advantage-complexity-a-namecomplexitya">#</a></h2>
+<p>While the quantum computers of today cannot yet perform to their full theoretical potential, they still have a demonstrable advantage over classical computers in terms of complexity.</p>
+<p><a name="cnn-gif"></a>
+<img loading="lazy" src="/images/cnn_graphic.gif" alt="CNN Filter"  />
+</p>
+<h4 id="image-by-me">Image by me<a hidden class="anchor" aria-hidden="true" href="#image-by-me">#</a></h4>
+<p>The classical CNN filter has a complexity of O(n<sup>2</sup>). This means that the upper bound of the number of computations it performs grows as the square of the input size. In this case, the input size, n, is 3. This is the length of one side of the filter area. 9 computations are required for every element of the filter to be multiplied by the corresponding element of the image under the filter.</p>
+<p><img loading="lazy" src="/images/filter_circuit_1.png" alt="Basic Filter Circuit"  />
+</p>
+<h4 id="image-based-on-a-design-from-oh-et-al-2020httpsarxivorgpdf200909423pdf-1">Image based on a design from <a href="https://arxiv.org/pdf/2009.09423.pdf">Oh et al., 2020</a><a hidden class="anchor" aria-hidden="true" href="#image-based-on-a-design-from-oh-et-al-2020httpsarxivorgpdf200909423pdf-1">#</a></h4>
+<p>The simple quantum filter circuit shown here has a complexity depth of O(⌈log<sub>2</sub>(n<sup>2</sup>)⌉)*. This filter has an input size n of 2. The 2 by 2 area is flattened into a 4 by 1 matrix, which is input into the quantum circuit. The depth of the circuit is defined as the number of columns of gates. In this case, there are 6.</p>
+<p>However, in complexity, we ignore both constants and numerical coefficients. Since the measurement column at the end and the encoder column at the beginning will both always be one depth, we disregard them. Additionally, each pooling segment will have a depth of 2, regardless of the input size, so we disregard that coefficient as well, leaving us with a complexity depth of 2 for an input size n of 2.</p>
+<p>This aligns with the complexity depth of O(⌈log<sub>2</sub>(n<sup>2</sup>)⌉), as 2<sup>2</sup> is 4, log<sub>2</sub>(4) is 2, and ⌈2⌉ is 2.</p>
+<h6 id="ceiling-function-denoted--">*ceiling function denoted ⌈ ⌉<a hidden class="anchor" aria-hidden="true" href="#ceiling-function-denoted--">#</a></h6>
+<p><img loading="lazy" src="/images/complexity_graph.png" alt="Complexity Graph"  />
+</p>
+<h4 id="image-created-by-me-using-desmoshttpswwwdesmoscomcalculator">Image created by me, using <a href="https://www.desmos.com/calculator">Desmos</a><a hidden class="anchor" aria-hidden="true" href="#image-created-by-me-using-desmoshttpswwwdesmoscomcalculator">#</a></h4>
+<p>As you can see from the graphs of n<sup>2</sup> in green and ⌈log<sub>2</sub>(n<sup>2</sup>)⌉ in purple, the complexity of the quantum filter grows much less quickly in relation to the input size than the classical filter does.</p>
+<h1 id="my-research-a-namemy-researcha">My Research <a name="my-research"></a><a hidden class="anchor" aria-hidden="true" href="#my-research-a-namemy-researcha">#</a></h1>
+<p>My goal over the course of my junior year was to create an adaptation of the first QCNN structure that could handle large image inputs. I planned to analyze the performance of the network on multiple test datasets, and compare it&rsquo;s performance to the accuracies achieved by other networks, and the complexity of those networks.</p>
+<p>The dataset I am using to train my network is the <a href="https://www.kaggle.com/shonenkov/melanoma-merged-external-data-512x512-jpeg">512x512 combined melanoma dataset</a>.</p>
+<h2 id="quantum-filter-a-namemy-quantum-filtera">Quantum filter <a name="my-quantum-filter"></a><a hidden class="anchor" aria-hidden="true" href="#quantum-filter-a-namemy-quantum-filtera">#</a></h2>
+<p><img loading="lazy" src="/images/my_quantum_filter.png" alt="My Quantum Filter"  />
+</p>
+<p>The quantum filter used in my network is more intricate than those shown previously, but it functions in much the same way.</p>
+<h3 id="segment-one-a-nameseg1a">Segment One <a name="seg1"></a><a hidden class="anchor" aria-hidden="true" href="#segment-one-a-nameseg1a">#</a></h3>
+<p><img loading="lazy" src="/images/segment1-2.png" alt="My Quantum Filter - Segment 1"  />
+</p>
+<p>The first segment is an encoder. However, rather than encoding classical information by rotating only one qubit on its x axis, as the encoder of the simpler circuit did, it performs a rotation on two qubits simultaneously, and acts on all three axes of rotation.</p>
+<h3 id="segment-two-a-nameseg2a">Segment Two <a name="seg2"></a><a hidden class="anchor" aria-hidden="true" href="#segment-two-a-nameseg2a">#</a></h3>
+<p><img loading="lazy" src="/images/segment3.png" alt="My Quantum Filter - Segment 3"  />
+</p>
+<p>The second segment is also a part of the encoder, though it may look different. Each piece of the encoder looks like this:
+<img loading="lazy" src="/images/encoder.png" alt="Encoder Piece"  />
+
+and encodes information onto two adjacent qubits. The first block of segment one encodes qubit pairs 0&amp;1, 2&amp;3, 4&amp;5, and 6&amp;7. The second block encodes pairs 1&amp;2, 3&amp;4, 5&amp;6, and 7&amp;8.</p>
+<p>However, this only accounts for 8 of the 9 classical inputs, and only 8 of the 9 possible adjacent pairs. The final pair is 8&amp;0. Segment two is simply the encoder piece for the 8&amp;0 pair, and the final portion of the encoder.</p>
+<h3 id="segment-three-a-nameseg3a">Segment Three <a name="seg3"></a><a hidden class="anchor" aria-hidden="true" href="#segment-three-a-nameseg3a">#</a></h3>
+<p><img loading="lazy" src="/images/pooling_segment.png" alt="My Quantum Filter - Segment 4"  />
+</p>
+<p>The third segment is the pooling segment. Like the encoder, it works much the same as the pooling segment of the simpler quantum circuit, but rather than just performing a rotation on the x and z axes, it uses rotations on all three axes, and a controlled not gate to pool the information.</p>
+<p>The pooling segment combines the data from all of the qubits down to a single qubit, which is measured at the end of the circuit. The first column pools qubits 1-8 down to qubits 2, 4, 6, and 8. The second column pools those qubits to just 4 and 8. The thirds pools 4 and 8 to qubit 8, and the final column pools qubit 0 down to qubit 8 as well. Qubit 8 is then measured to obtain a single classical value as the result of the entire circuit.</p>
+<h3 id="complexity-a-namemy-filter-complexitya">Complexity <a name="my-filter-complexity"></a><a hidden class="anchor" aria-hidden="true" href="#complexity-a-namemy-filter-complexitya">#</a></h3>
+<p>While it may seem like this filter circuit design would be far more complex than the simple filter circuit shown previously, it actually has the same complexity.</p>
+<p>The encoding segment will always have either 34 or 51 depths. In the case of an input size of 3 (3x3 square, 9 total inputs), it will have 51. However, since this value alternates but will never increase beyond 51 as the input increases, it can be ignored in the complexity function.</p>
+<p>The pooling segment also seem to have increased in complexity, but all that has changed is the depth of each section has gone from 2 to 7. We can represent the depth of each section of the pooling segment as L. For any given circuit, the value of L won’t change with a change in input size: only the number of sections required in the pooling segment will. Therefore, we can also remove the numerical coefficient L.</p>
+<p>We are left with the same complexity depth as the simpler circuit: O(⌈log<sub>2</sub>(n<sup>2</sup>)⌉)</p>
+<h2 id="network-structure-a-namemy-network-structurea">Network Structure <a name="my-network-structure"></a><a hidden class="anchor" aria-hidden="true" href="#network-structure-a-namemy-network-structurea">#</a></h2>
+<p>I am using a tensorflow Keras sequential framework for my algorithm.</p>
+<pre><code>model = tf.keras.Sequential()
+</code></pre>
+<p>The first layer is my custom quantum layer.</p>
+<pre><code>model.add(qconv_64x64_trainable(image_to_circuit, add_pooling))
+</code></pre>
+<p>Next, there are 2 sets of two dimensional convolutional layers and two dimensional pooling layers.</p>
+<pre><code>model.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu', input_shape=[61, 61]))
+model.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))
+model.add(tf.keras.layers.Conv2D(filters=32, kernel_size=3, activation='relu'))
+model.add(tf.keras.layers.MaxPool2D(pool_size=2, strides=2))
+</code></pre>
+<p>The data is then flattened.</p>
+<pre><code>model.add(tf.keras.layers.Flatten())
+</code></pre>
+<p>The network ends with a four-layer fully connected network with a binary output neuron.</p>
+<pre><code>model.add(tf.keras.layers.Dense(units=256, activation='relu'))
+model.add(tf.keras.layers.Dense(units=256, activation='relu'))
+model.add(tf.keras.layers.Dense(units=256, activation='relu'))
+model.add(tf.keras.layers.Dense(units=256, activation='relu'))
+model.add(tf.keras.layers.Dense(units=1, activation='sigmoid'))
+</code></pre>
+<h3 id="the-custom-quantum-layer-a-namemy-quantum-layera">The Custom Quantum Layer <a name="my-quantum-layer"></a><a hidden class="anchor" aria-hidden="true" href="#the-custom-quantum-layer-a-namemy-quantum-layera">#</a></h3>
+<p>This is the code for the custom quantum layer in my network:</p>
+<pre><code>class qconv_64x64_trainable (tf.keras.layers.Layer):
+	def __init__(self, encoder, pooler):
+        super(qconv_64x64_trainable, self).__init__()
+        self.encode_data = encoder
+        self.pool = pooler
+        self.simulator = qsimcirq.QSimSimulator()
+
+	def build(self, input_shape):
+        self.kernel = self.add_weight(&quot;kernel&quot;, shape=[100,1])
+
+	def call(self, input):
+        tf.compat.v1.enable_eager_execution()
+        print(tf.executing_eagerly())
+
+        result = np.empty([61,61])
+        for j in prange(0,input.shape[1]-3):
+            for i in prange(0,input.shape[0]-3):
+                print('input:',input,input.numpy())
+                image_segment = input[0][j:j+4,i:i+4]
+                iss_encoded_data = self.encode_data(image_segment)
+                tbt_cirq_full = self.pool(iss_encoded_data, [self.kernel[i].numpy()[0] for i in range(90)])
+                res = self.simulator.run(tbt_cirq_full).data.iat[0,0]
+                result[j,i] = res
+        return np.array([[result]])
+</code></pre>
+<p>Let&rsquo;s go over it in a bit more detail.</p>
+<p>The custom layer has three functions, based on the tensorflow Keras layer structure:</p>
+<h4 id="the-__init__-function">The <strong>init</strong> function<a hidden class="anchor" aria-hidden="true" href="#the-__init__-function">#</a></h4>
+<p>Almost all python classes have this function. This just sets up the object, and saves any constructor variables to the object.</p>
+<pre><code>def __init__(self, encoder, pooler):
+	super(qconv_64x64_trainable, self).__init__()
+	self.encode_data = encoder
+	self.pool = pooler
+	self.simulator = qsimcirq.QSimSimulator()
+</code></pre>
+<p>The first part of the __init__ function gets the superclass, which is the tensorflow Keras layer, and initializes it.</p>
+<pre><code>super(qconv_64x64_trainable, self).__init__()
+</code></pre>
+<p>Next, the variables passed when the object is initialized are stored. In this case, the variables encoder and pooler are stored to the object.</p>
+<pre><code>self.encode_data = encoder
+self.pool = pooler
+</code></pre>
+<p>Finally, the simulator that will be used to compute the quantum circuit results is created. This uses the qsimcirq package, which is built for simulating large quantum circuits.</p>
+<pre><code>self.simulator = qsimcirq.QSimSimulator()
+</code></pre>
+<h4 id="the-build-function">The build function<a hidden class="anchor" aria-hidden="true" href="#the-build-function">#</a></h4>
+<pre><code>def build(self, input_shape):
+	self.kernel = self.add_weight(&quot;kernel&quot;, shape=[100,1])
+</code></pre>
+<p>This one is a little simpler. The build function is called when the network is compiled, right before it is trained. It creates the layer&rsquo;s kernel. This is the filter that passes over the image in a normal convolutional layer (see <a href="#cnn-gif">this gif</a>). In the gif, the kernel has the shape [3,3]. However, in the custom layer, the kernel is initialized with the rather unusual shape [100,1], for reasons that will be explained in the next section.</p>
+<h4 id="the-call-function">The call function<a hidden class="anchor" aria-hidden="true" href="#the-call-function">#</a></h4>
+<pre><code>def call(self, input):
+	tf.compat.v1.enable_eager_execution()
+	print(tf.executing_eagerly())
+
+	result = np.empty([61,61])
+	for j in range(0,input.shape[1]-3):
+        for i in range(0,input.shape[0]-3):
+            print('input:',input,input.numpy())
+            image_segment = input[0][j:j+4,i:i+4]
+            iss_encoded_data = self.encode_data(image_segment)
+            tbt_cirq_full = self.pool(iss_encoded_data, [self.kernel[i].numpy()[0] for i in range(90)])
+            res = self.simulator.run(tbt_cirq_full).data.iat[0,0]
+            result[j,i] = res
+	return np.array([[result]])
+</code></pre>
+<p>This is the big one. The call function is called every time an image passes through the layer. In a normal layer, it would be a fast, simple computation: the output would simply be the matrix multiplication of the input image and the kernel. However, this layer works a little differently.</p>
+<p>First, we check to make sure that tensorflow is executing eagerly. This is because we want to be able to access the values of our tensors during this step, and we can only do this during eager execution. However, this doesn&rsquo;t NOT need to be checked for every call, so this is an inefficiency in the current code.</p>
+<pre><code>tf.compat.v1.enable_eager_execution()
+print(tf.executing_eagerly())
+</code></pre>
+<p>Next, we create an empty array to store our output in. Since we know that the input images will be scaled down to 64 by 64, and the size of the quantum kernel we will be using is 4 by 4, we know that the output will be 61 by 61, since there will be a strip of three pixels on the bottom and right edges of the input that the kernel cannot begin on, since some part of it would extend past the image.</p>
+<pre><code>result = np.empty([61,61])
+</code></pre>
+<p>These for loops loop through every pixel in the input image, besides those  in the strips mentioned above.</p>
+<pre><code>for j in range(0,input.shape[1]-3):
+	for i in range(0,input.shape[0]-3):
+</code></pre>
+<p>Within each for loop, we do a number of things.</p>
+<pre><code>print('input:',input,input.numpy())
+image_segment = input[0][j:j+4,i:i+4]
+iss_encoded_data = self.encode_data(image_segment)
+tbt_cirq_full = self.pool(iss_encoded_data, [self.kernel[i].numpy()[0] for i in range(90)])
+res = self.simulator.run(tbt_cirq_full).data.iat[0,0]
+result[j,i] = res
+</code></pre>
+<ol>
+<li>
+<p>Print the entire input, and the numpy array version of the input. This was another check for eager execution, as the numpy array would be inaccessible unless tensorflow were executing eagerly, but it should not be happening for every pixel.</p>
+</li>
+<li>
+<p>Identify the segment of the of the image that the filter is looking at.</p>
+</li>
+<li>
+<p>Encode the data. This is segments <a href="#seg1">one</a> and <a href="#seg2">two</a> of the filter circuit. The function that constructs this portion of the filter circuit is passed as the encoder in the __init__ function.</p>
+</li>
+<li>
+<p>Construct the full circuit. This adds segment <a href="#seg3">three</a> to the circuit. The function that builds the pooling segment off of the encoder segment is passed as the pooler in the __init__ function.</p>
+<p>This is why we have such an oddly shaped kernel. Since, when the network is training, tensorflow automatically adjust the waits of the kernel, we are using the values of the kernel as the rotations for the adjustable gates in the quantum circuit. This way, the quantum circuit is automatically trained to work best with the dataset.</p>
+</li>
+<li>
+<p>Simulate the circuit. This is done using the qsimcirq module.</p>
+</li>
+<li>
+<p>Add the result of the circuit to the proper location in the output array.</p>
+</li>
+</ol>
+<p>Finally, outside the for loops, the array of results is returned and passed to the next portion of the network.</p>
+<pre><code>return np.array([[result]])
+</code></pre>
+<h2 id="results-and-plans-a-nameresultsa">Results and Plans <a name="results"></a><a hidden class="anchor" aria-hidden="true" href="#results-and-plans-a-nameresultsa">#</a></h2>
+<p>Unfortunately, accuracy data could not be collected for the hybrid model that was designed in this research. The way the filter circuits are being implemented is incredibly inefficient. The entire circuit is built with different rotation values for the gates, then sent to a quantum computer and run, for every pixel of every image in the dataset. This makes training the network, even on an incredibly limited subset of the dataset, take such a long time as to render the algorithm useless.</p>
+<p><del>Over the course of my senior year, this project will be revisited. I plan to rewrite much of the code, as well as work with experts in the quantum computing field to optimize the process by which I create the quantum circuits.</del></p>
+<h1 id="sources-a-namesourcesa">Sources <a name="sources"></a><a hidden class="anchor" aria-hidden="true" href="#sources-a-namesourcesa">#</a></h1>
+<div style="text-indent: -36px; padding-left: 36px;">
+<p>Cong, I., Choi, S., &amp; Lukin, M. (2018) Quantum convolutional neural networks. ArXiv. <a href="https://arxiv.org/pdf/1810.03787.pdf">https://arxiv.org/pdf/1810.03787.pdf</a></p>
+<p>Henderson, M., Shakya, S., Pradhan, S., &amp; Cook, T. (2020). Quanvolutional neural networks: Powering image 	recognition with quantum circuits. Quantum Machine Intelligence 2(1), <a href="https://doi.org/10.1007/s42484-020-00012-y">https://doi.org/10.1007/s42484-020-00012-y</a></p>
+<p>Hosny, K. M., Kassem, M. A., &amp; Foaud, M. M. (2019). Classification of skin lesions using transfer learning and 	augmentation with Alex-net. PloS one, 14(5), e0217293. <a href="https://doi.org/10.1371/journal.pone.0217293">https://doi.org/10.1371/journal.pone.0217293</a></p>
+<p>Kang, G., &amp; Lui, K., Hou, B., &amp; Zhang, N. (2017). 3D multi-view convolutional neural networks for lung nodule 	classification. PLoS ONE, 12(11). <a href="https://doi.org/10.1371/journal.pone.0188290">https://doi.org/10.1371/journal.pone.0188290</a></p>
+<p>Kerenidis, I., Landman, J., &amp; Prakash, A. (2019). Quantum algorithms for deep convolutional neural networks. ArXiv. <a href="https://arxiv.org/pdf/1911.01117.pdf">https://arxiv.org/pdf/1911.01117.pdf</a></p>
+<p>Lucas, C. R., Sanders, L. L., Murray, J. C., Myers, S. A., Hall, R. P., &amp; Grichnik, J. M. (2003). Early melanoma detection: Nonuniform dermoscopic features and growth. Journal of the American Academy of 	Dermatology, 48(5). <a href="https://doi.org/10.1067/mjd.2003.283">https://doi.org/10.1067/mjd.2003.283</a></p>
+<p>Lui, K., &amp; Kang, G. (2017). Multiview convolutional neural networks for lung nodule classification. International Journal of Imaging Systems and Technology, 27. <a href="https://doi.org/10.1002/ima.22206">https://doi.org/10.1002/ima.22206</a></p>
+<p>Mohammed, M. A., Al-Khateeb, B., Rashid, A. N., Ibrahim, D. A., Ghani, M. K. A., &amp; Mostafa, S. A. (2018). Neural network and multi-fractal dimension features for breast cancer classification from ultrasound images. Computers &amp; Electrical Engineering, 70. <a href="https://doi.org/10.1016/j.compeleceng.2018.01.033">https://doi.org/10.1016/j.compeleceng.2018.01.033</a></p>
+<p>Oh S., Choi, J., &amp; Kim, J. (2020). A Tutorial on Quantum Convolutional Neural Networks (QCNN). <a href="https://arxiv.org/pdf/2009.09423.pdf">https://arxiv.org/pdf/2009.09423.pdf</a></p>
+<p>Saha, S. (2018, December 17). <em>A comprehensive guide to convolutional neural networks - the eli5 way.</em> <a href="https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53">https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53</a>.</p>
+<p>Swetter, S. M., &amp; Geller, A. C. (2014). Perspective: Catch melanoma early. Nature, 515. <a href="https://doi.org/10.1038/515S117a">https://doi.org/10.1038/515S117a</a></p>
+</div>
+<hr>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://8-bit-confusion.github.io/tags/images/">images</a></li>
+      <li><a href="https://8-bit-confusion.github.io/tags/melanoma/">melanoma</a></li>
+      <li><a href="https://8-bit-confusion.github.io/tags/quantum/">quantum</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2021 <a href="https://8-bit-confusion.github.io">Lily Wasko</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+    menu.onscroll = function () {
+        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

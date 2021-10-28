@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Digital Research Portfolio on Lily Wasko</title>
+    <title>Lily Wasko</title>
     <link>https://8-bit-confusion.github.io/</link>
-    <description>Recent content in Digital Research Portfolio on Lily Wasko</description>
+    <description>Recent content on Lily Wasko</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Mon, 25 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Progress Report 01 - 10/25/2021</title>
-      <link>https://8-bit-confusion.github.io/progress-reports/10-25-2021/</link>
+      <link>https://8-bit-confusion.github.io/en/progress-reports/10-25-2021/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://8-bit-confusion.github.io/progress-reports/10-25-2021/</guid>
+      <guid>https://8-bit-confusion.github.io/en/progress-reports/10-25-2021/</guid>
       <description>Slight update to research plan based on research paper
 N-qubit quantum teleportation, information splitting and superdense coding through the composite GHZ–Bell channel
 by Debashis Saha and Prasanta K. Panigrahi:
@@ -21,42 +20,38 @@ Since N+1 qubits must be acted on in order to encode 2N + 1 classical bits, the 
     
     <item>
       <title>Relevant details from &#39;N-qubit ... superdense coding through the composite GHZ–Bell channel&#39;</title>
-      <link>https://8-bit-confusion.github.io/sources/d-saha-and-p-panigrah/</link>
+      <link>https://8-bit-confusion.github.io/en/sources/d-saha-and-p-panigrah/</link>
       <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://8-bit-confusion.github.io/sources/d-saha-and-p-panigrah/</guid>
-      <description>This source is relevant to Secure Communication with GHZ 5.</description>
+      <guid>https://8-bit-confusion.github.io/en/sources/d-saha-and-p-panigrah/</guid>
+      <description>N-qubit quantum teleportation, information splitting and superdense coding through the composite GHZ–Bell channel by Debashis Saha and Prasanta K. Panigrahi - source analysis</description>
     </item>
     
     <item>
       <title>Relevant details from Brilliant</title>
-      <link>https://8-bit-confusion.github.io/sources/brilliant/</link>
+      <link>https://8-bit-confusion.github.io/en/sources/brilliant/</link>
       <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://8-bit-confusion.github.io/sources/brilliant/</guid>
-      <description>This source is relevant to Secure Communication with GHZ 5.</description>
+      <guid>https://8-bit-confusion.github.io/en/sources/brilliant/</guid>
+      <description>Brilliant - source analysis</description>
     </item>
     
     <item>
       <title>Secure Communication Using Superdense Coding of the GHZ 5 State</title>
-      <link>https://8-bit-confusion.github.io/projects/qsdc-comm/</link>
+      <link>https://8-bit-confusion.github.io/en/projects/qsdc-comm/</link>
       <pubDate>Wed, 06 Oct 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://8-bit-confusion.github.io/projects/qsdc-comm/</guid>
-      <description>View this project&amp;rsquo;s code on GitHub :)
-Background  Quantum Computing  Qubits  The most basic unit of information in classical computing is the bit. It stores a value either of 0 or 1, which represent the presense or absense of electrons in a transistor.
-In quantum computing, however, the most basic unit of information is the qubit. A qubit, like a bit, can store either 0 or 1, but it also has the unique ability to store a value that is both 0 and 1: a superposition state.</description>
+      <guid>https://8-bit-confusion.github.io/en/projects/qsdc-comm/</guid>
+      <description>Senior year research</description>
     </item>
     
     <item>
       <title>Melanoma Detection with Quantum Convolutional Neural Networks</title>
-      <link>https://8-bit-confusion.github.io/projects/mdwqcnn/</link>
+      <link>https://8-bit-confusion.github.io/en/projects/mdwqcnn/</link>
       <pubDate>Sun, 13 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://8-bit-confusion.github.io/projects/mdwqcnn/</guid>
-      <description>View this project&amp;rsquo;s code on GitHub :)
-Background  Melanoma  Melanoma is a deadly skin cancer. Out of all skin lesions,it is especially dangerous because it is outnumbered by other skin lesions, and it is difficult to identify. However, melanoma is best treated when caught early, so treatment relies on rapid identification.
-According to the Skin Cancer Foundation, an estimated 7,180 people will die from melanoma in 2021 alone.</description>
+      <guid>https://8-bit-confusion.github.io/en/projects/mdwqcnn/</guid>
+      <description>Junior year research</description>
     </item>
     
   </channel>
