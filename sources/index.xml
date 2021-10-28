@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sources on Lily Wasko</title>
+    <link>https://8-bit-confusion.github.io/sources/</link>
+    <description>Recent content in Sources on Lily Wasko</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/sources/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Relevant details from &#39;N-qubit ... superdense coding through the composite GHZ–Bell channel&#39;</title>
+      <link>https://8-bit-confusion.github.io/en/sources/d-saha-and-p-panigrah/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/en/sources/d-saha-and-p-panigrah/</guid>
+      <description>N-qubit quantum teleportation, information splitting and superdense coding through the composite GHZ–Bell channel by Debashis Saha and Prasanta K. Panigrahi - source analysis</description>
+    </item>
+    
+    <item>
+      <title>Relevant details from Brilliant</title>
+      <link>https://8-bit-confusion.github.io/en/sources/brilliant/</link>
+      <pubDate>Thu, 21 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/en/sources/brilliant/</guid>
+      <description>Brilliant - source analysis</description>
+    </item>
+    
+  </channel>
+</rss>
