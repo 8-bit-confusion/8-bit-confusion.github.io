@@ -5,7 +5,16 @@
     <link>https://8-bit-confusion.github.io/</link>
     <description>Recent content on Lily Wasko</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 16 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://8-bit-confusion.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Relevant details from &#39;Increasing ... throughput in quantum networks by combining quantum linear network coding with superdense coding&#39;</title>
+      <link>https://8-bit-confusion.github.io/en/sources/s-herbert/</link>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://8-bit-confusion.github.io/en/sources/s-herbert/</guid>
+      <description>Increasing the classical data throughput in quantum networks by combining quantum linear network coding with superdense coding by Steven Herbert - source analysis</description>
+    </item>
+    
     <item>
       <title>Progress Report 02 - 11/16/2021</title>
       <link>https://8-bit-confusion.github.io/en/progress-reports/11-16-2021/</link>
@@ -30,15 +39,6 @@ To do this, I will be using super dense coding of one GHZ state and two Bell sta
 N-qubit quantum teleportation, information splitting and superdense coding through the composite GHZ–Bell channel
 by Debashis Saha and Prasanta K. Panigrahi:
 Since N+1 qubits must be acted on in order to encode 2N + 1 classical bits, the pure GHZ 5 state is useless for superdense coding, and is being abandoned for the secure communication demo in favor of the composite GHZ-Bell state outlined in the research above.</description>
-    </item>
-    
-    <item>
-      <title>Relevant details from &#39;Increasing ... throughput in quantum networks by combining quantum linear network coding with superdense coding&#39;</title>
-      <link>https://8-bit-confusion.github.io/en/sources/s-herbert/</link>
-      <pubDate>Mon, 25 Oct 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://8-bit-confusion.github.io/en/sources/s-herbert/</guid>
-      <description>Increasing the classical data throughput in quantum networks by combining quantum linear network coding with superdense coding by Steven Herbert - source analysis</description>
     </item>
     
     <item>
