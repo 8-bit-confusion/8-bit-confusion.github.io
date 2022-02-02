@@ -10,7 +10,7 @@
 <meta name="description" content="Increasing the classical data throughput in quantum networks by combining quantum linear network coding with superdense coding by Steven Herbert - source analysis">
 <meta name="author" content="Lily Wasko">
 <link rel="canonical" href="https://8-bit-confusion.github.io/en/sources/s-herbert/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://8-bit-confusion.github.io/favicon.ico">
@@ -65,8 +65,8 @@
   "keywords": [
     "dense encoding", "secure communication", "quantum"
   ],
-  "articleBody": "This source is not directly relevant to the secure communication demo project; rather it is related to the theoretical applications of the kind of communication outlined in the project.\nThoughts on the theoretical use of qubits in quantum communication networks based on research paper\nIncreasing the classical data throughput in quantum networks by combining quantum linear network coding with superdense coding\nby Steven Herbert:\nIt is interesting to note the idea of having nodes A and B, each capable of generating entangled pairs, where B continually sends entangled pair halves to A and A continually sends those pairs, encoded, back to B.\nA conceptual problem I’d encountered with maintaining security previously was based on the assumption that the entangled pairs would be generated and encoded at the same node, A. The problem arises when A must, at some point, send both halves of the entangled pair to B in order for B to decode them. If both halves are in transit on the same data line at any point, then a malicious actor could intercept them both, rendering the security null.\nInitially, I thought that the idea put forth in Herbert’s paper addressed this problem, since one half of the entangled pairs never leave B and are therefore insusceptible to attack, but there does still seem to be some issue. A malicious actor with access to both data lines that connect A and B could intercept the empty entangled pair halves flowing from B to A, and send instead some halves of their own entangled pairs, the other halves of which they keep. They could then intercept the encoded data flowing from A back to B, and since they would have both halves of the pairs, the information could easily be decoded and the security again rendered void.\nIt is important to mention: I have only as of yet given this article a preliminary read, and I have only gained a basic understanding of the very complicated proposed final method. If this flaw is addressed later in the article, this page will be revised.\n[relevant information highlighting is still in progress. it will be added once it is complete.]\n",
-  "wordCount" : "359",
+  "articleBody": "This source is not directly relevant to the secure communication demo project; rather it is related to the theoretical applications of the kind of communication outlined in the project.\nThoughts on the theoretical use of qubits in quantum communication networks based on research paper\nIncreasing the classical data throughput in quantum networks by combining quantum linear network coding with superdense coding\nby Steven Herbert:\nIt is interesting to note the idea of having nodes A and B, each capable of generating entangled pairs, where B continually sends entangled pair halves to A and A continually sends those pairs, encoded, back to B.\nA conceptual problem I’d encountered with maintaining security previously was based on the assumption that the entangled pairs would be generated and encoded at the same node, A. The problem arises when A must, at some point, send both halves of the entangled pair to B in order for B to decode them. If both halves are in transit on the same data line at any point, then a malicious actor could intercept them both, rendering the security null.\nInitially, I thought that the idea put forth in Herbert’s paper addressed this problem, since one half of the entangled pairs never leave B and are therefore insusceptible to attack, but there does still seem to be some issue. A malicious actor with access to both data lines that connect A and B could intercept the empty entangled pair halves flowing from B to A, and send instead some halves of their own entangled pairs, the other halves of which they keep. They could then intercept the encoded data flowing from A back to B, and since they would have both halves of the pairs, the information could easily be decoded and the security again rendered void.\nRelevant information highlighting will not be completed for this paper - the relevance to my research is minimal.\n",
+  "wordCount" : "316",
   "inLanguage": "en",
   "datePublished": "2021-11-19T00:00:00Z",
   "dateModified": "2021-11-19T00:00:00Z",
@@ -160,7 +160,7 @@
     <div class="post-description">
       Increasing the classical data throughput in quantum networks by combining quantum linear network coding with superdense coding by Steven Herbert - source analysis
     </div>
-    <div class="post-meta">November 19, 2021&nbsp;·&nbsp;Lily Wasko
+    <div class="post-meta"><span title='2021-11-19 00:00:00 +0000 UTC'>November 19, 2021</span>&nbsp;·&nbsp;Lily Wasko
 
 </div>
   </header> 
@@ -171,8 +171,7 @@
 <p>It is interesting to note the idea of having nodes A and B, each capable of generating entangled pairs, where B continually sends entangled pair halves to A and A continually sends those pairs, encoded, back to B.</p>
 <p>A conceptual problem I&rsquo;d encountered with maintaining security previously was based on the assumption that the entangled pairs would be generated and encoded at the same node, A. The problem arises when A must, at some point, send both halves of the entangled pair to B in order for B to decode them. If both halves are in transit on the same data line at any point, then a malicious actor could intercept them both, rendering the security null.</p>
 <p>Initially, I thought that the idea put forth in Herbert&rsquo;s paper addressed this problem, since one half of the entangled pairs never leave B and are therefore insusceptible to attack, but there does still seem to be some issue. A malicious actor with access to both data lines that connect A and B could intercept the empty entangled pair halves flowing from B to A, and send instead some halves of their own entangled pairs, the other halves of which they keep. They could then intercept the encoded data flowing from A back to B, and since they would have both halves of the pairs, the information could easily be decoded and the security again rendered void.</p>
-<p>It is important to mention: I have only as of yet given this article a preliminary read, and I have only gained a basic understanding of the very complicated proposed final method. If this flaw is addressed later in the article, this page will be revised.</p>
-<p><small><small>[relevant information highlighting is still in progress. it will be added once it is complete.]</small></small></p>
+<p><small>Relevant information highlighting will not be completed for this paper - the relevance to my research is minimal.</small></p>
 <hr>
 
   </div>
@@ -188,7 +187,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://8-bit-confusion.github.io">Lily Wasko</a></span>
+    <span>&copy; 2022 <a href="https://8-bit-confusion.github.io">Lily Wasko</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -203,9 +202,11 @@
 
 <script>
     let menu = document.getElementById('menu')
-    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-    menu.onscroll = function () {
-        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -10,7 +10,7 @@
 <meta name="description" content="Relevant details from sources.">
 <meta name="author" content="Lily Wasko">
 <link rel="canonical" href="https://8-bit-confusion.github.io/sources/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://8-bit-confusion.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://8-bit-confusion.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://8-bit-confusion.github.io/favicon-32x32.png">
@@ -140,7 +140,7 @@ Increasing the classical data throughput in quantum networks by combining quantu
 by Steven Herbert:
 It is interesting to note the idea of having nodes A and B, each capable of generating entangled pairs, where B continually sends entangled pair halves to A and A continually sends those pairs, encoded, back to B....</p>
   </section>
-  <footer class="entry-footer">November 19, 2021&nbsp;·&nbsp;Lily Wasko</footer>
+  <footer class="entry-footer"><span title='2021-11-19 00:00:00 +0000 UTC'>November 19, 2021</span>&nbsp;·&nbsp;Lily Wasko</footer>
   <a class="entry-link" aria-label="post link to Relevant details from &#39;Increasing ... throughput in quantum networks by combining quantum linear network coding with superdense coding&#39;" href="https://8-bit-confusion.github.io/en/sources/s-herbert/"></a>
 </article>
 
@@ -152,7 +152,7 @@ It is interesting to note the idea of having nodes A and B, each capable of gene
   <section class="entry-content">
     <p>This source is relevant to Secure Communication with GHZ 5.</p>
   </section>
-  <footer class="entry-footer">October 25, 2021&nbsp;·&nbsp;Lily Wasko</footer>
+  <footer class="entry-footer"><span title='2021-10-25 00:00:00 +0000 UTC'>October 25, 2021</span>&nbsp;·&nbsp;Lily Wasko</footer>
   <a class="entry-link" aria-label="post link to Relevant details from &#39;N-qubit ... superdense coding through the composite GHZ–Bell channel&#39;" href="https://8-bit-confusion.github.io/en/sources/d-saha-and-p-panigrah/"></a>
 </article>
 
@@ -164,13 +164,13 @@ It is interesting to note the idea of having nodes A and B, each capable of gene
   <section class="entry-content">
     <p>This source is relevant to Secure Communication with GHZ 5.</p>
   </section>
-  <footer class="entry-footer">October 21, 2021&nbsp;·&nbsp;Lily Wasko</footer>
+  <footer class="entry-footer"><span title='2021-10-21 00:00:00 +0000 UTC'>October 21, 2021</span>&nbsp;·&nbsp;Lily Wasko</footer>
   <a class="entry-link" aria-label="post link to Relevant details from Brilliant" href="https://8-bit-confusion.github.io/en/sources/brilliant/"></a>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://8-bit-confusion.github.io">Lily Wasko</a></span>
+    <span>&copy; 2022 <a href="https://8-bit-confusion.github.io">Lily Wasko</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -185,9 +185,11 @@ It is interesting to note the idea of having nodes A and B, each capable of gene
 
 <script>
     let menu = document.getElementById('menu')
-    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-    menu.onscroll = function () {
-        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

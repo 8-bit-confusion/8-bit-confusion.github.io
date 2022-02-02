@@ -15,7 +15,7 @@ Updated content
 To do this, I will be using super dense coding of one GHZ state and two Bell state entangled groups. The GHZ state and the first Bell state will be entangled, encoded, passed through a series of identity gates, decoded, and measured, and then the second Bell state will go through the same procedure.">
 <meta name="author" content="Lily Wasko">
 <link rel="canonical" href="https://8-bit-confusion.github.io/en/progress-reports/11-16-2021/" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
     onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://8-bit-confusion.github.io/favicon.ico">
@@ -172,7 +172,7 @@ To do this, I will be using super dense coding of one GHZ state and two Bell sta
     <h1 class="post-title">
       Progress Report 02 - 11/16/2021
     </h1>
-    <div class="post-meta">November 16, 2021&nbsp;·&nbsp;Lily Wasko
+    <div class="post-meta"><span title='2021-11-16 00:00:00 +0000 UTC'>November 16, 2021</span>&nbsp;·&nbsp;Lily Wasko
 
 </div>
   </header> 
@@ -182,7 +182,7 @@ To do this, I will be using super dense coding of one GHZ state and two Bell sta
 <p>I will be using a composite 7 qubit GHZ-Bell state</p>
  <img class="special-img-class" style="width:50%" src="https://latex.codecogs.com/svg.latex?\color{Gray}\frac{|000\rangle+|111\rangle}{\sqrt{2}}\otimes\frac{|00\rangle+|11\rangle}{\sqrt{2}}\otimes\frac{|00\rangle+|11\rangle}{\sqrt{2}}"/>
 <p>spread out over multiple circuit runs on the quantum computer.</p>
-<p><small><small><a href="/en/projects/qsdc-comm/#reasearch-goals">Updated content</a></small></small><br></p>
+<p><small><small><a href="/en/projects/qsdc-comm/#research-goals">Updated content</a></small></small><br></p>
 <p>To do this, I will be using super dense coding of one GHZ state and two Bell state entangled groups. The GHZ state and the first Bell state will be entangled, encoded, passed through a series of identity gates, decoded, and measured, and then the second Bell state will go through the same procedure. This allows me to encode the 7 bit ASCII character set on a quantum computer that can only make use of 5 qubits at a time. This process will repeat for every character in the desired message, and once all of the measurements are complete, the results will be aggregated.</p>
 <p>Each circuit (each GHZ-Bell joint state and lone Bell state) will be run multiple times. This allows for a drastic decrease in error. The number of runs of the circuit is a tunable hyperparameter that should be minimized within acceptable error bounds in order to decrease traffic on a theoretical quantum communication network. Once all runs are complete and measured, the mode result (the measurement that occurred the highest number of times) will be selected to be interpreted as the decoded classical data, minimizing the effect of error on the communications.</p>
 <p><small><small><a href="/en/projects/qsdc-comm/#demo-code">Updated content</a></small></small><br></p>
@@ -201,7 +201,7 @@ To do this, I will be using super dense coding of one GHZ state and two Bell sta
     </main>
     
 <footer class="footer">
-    <span>&copy; 2021 <a href="https://8-bit-confusion.github.io">Lily Wasko</a></span>
+    <span>&copy; 2022 <a href="https://8-bit-confusion.github.io">Lily Wasko</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
@@ -216,9 +216,11 @@ To do this, I will be using super dense coding of one GHZ state and two Bell sta
 
 <script>
     let menu = document.getElementById('menu')
-    menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-    menu.onscroll = function () {
-        localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
