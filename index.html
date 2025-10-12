@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lily Wasko</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body class="flex-col">
+        <header class="flex-col">
+            <div id="primary-header" class="flex-row">
+                <div>
+                    <h1>Lily Wasko</h1>
+                    <h2>(she/her)</h2>
+                </div>
+                <nav class="flex-row">
+                    <a id="current-page">HOME</a>
+                    <a href="./about/">ABOUT</a>
+                    <a href="./projects/">PROJECTS</a>
+                </nav>
+            </div>
+        </header>
+        <div class="main-content flex-col">
+            <div class="flex-col" style="padding: 0px;">
+                <div class="flex-row" style="justify-content: start; align-items: center; padding: 0px; gap: 0.5em;">
+                    <h2>Welcome to my portfolio!</h2>
+                    <img src="./resources/google-waving_hand.png" alt="An emoji of a hand waving hello" style="height: 24px;">
+                </div>
+                <p>
+                    Check out my projects via the highlights below, find more detail in the 'Projects'
+                    page, or see my 'About' page to learn more about my interests!
+                </p>
+            </div>
+            <h2>Project highlights:</h2>
+            <div id="highlight-row" class="flex-row">
+                <section class="flex-col highlight">
+                    <img src="./resources/booklist-icon.png" alt="The icon for the Booklist app: A brown book symbol on a tan background.">
+                    <div>
+                        <h3>Booklist</h3>
+                        <p>
+                            <i>Written in Dart, using the Flutter app developement framework.</i>
+                            <br><br>
+                            A simple Android application for tracking the books you've read,
+                            your progress in the books you're reading, and the books you want to read.
+                        </p>
+                    </div>
+                    <a href="./projects/#booklist"  aria-label="Booklist Project"></a>
+                </section>
+                <section class="flex-col highlight">
+                    <img src="./resources/software_rasterizer-screenshot.png" alt="A screenshot of the software rasterizer running, showing a textured, shaded cube rotating above a plane.">
+                    <div>
+                        <h3>Software Rasterizer</h3>
+                        <p>
+                            <i>Written in C, using SDL for window management, events, and writing pixels.</i>
+                            <br><br>
+                            A software rasterizer impelemented from scratch in C, with triangle-based models,
+                            .obj file imports, UV-mapped textures, near-plane clipping, and basic lighting.
+                        </p>
+                    </div>
+                    <a href="./projects/#software-rasterizer" aria-label="Software Rasterizer Project"></a>
+                </section>
+                <section class="flex-col highlight">
+                    <img src="./resources/fbtntools-readme.png" alt="A screenshot of the README file for FBTNTools.">
+                    <div>
+                        <h3>FBTNTools</h3>
+                        <p>
+                            <i>Written in Python.</i>
+                            <br> <br><br>
+                            A simplified wrapper for several APIs, to be used by collaborators
+                            on a generative AI research project who were newer to Python.
+                        </p>
+                    </div>
+                    <a href="./projects/#fbtn-tools" aria-label="FBTN Tools Project"></a>
+                </section>
+            </div>
+        </div>
+        <footer class="flex-col primary-footer">
+            <nav class="flex-row" style="padding: 0px; gap: 16px;">
+                <a href="./">Home</a>
+                <a href="./about/">About</a>
+                <a href="./projects/">Projects</a>
+            </nav>
+            <small class="copyright">&copy; 2025 Lily Wasko</small>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Projects | Lily Wasko</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../styles/main.css">
+    </head>
+    <body class="flex-col">
+        <header class="flex-col">
+            <div id="primary-header" class="flex-row">
+                <h1>Projects</h1>
+                <nav class="flex-row">
+                    <a href="../">HOME</a>
+                    <a href="../about/">ABOUT</a>
+                    <a id="current-page">PROJECTS</a>
+                </nav>
+            </div>
+        </header>
+        <div class="main-content flex-col">
+            <a id="booklist" aria-hidden="true" tabindex="-1" style="height: 0px;"></a>
+            <img src="../resources/booklist_banner-transparent.png" alt="Banner image for the Booklist project, showing screenshops of various app pages">
+            <span>
+                Created using the Dart programming language and Flutter app developement framework,
+                Booklist is an app I built to keep track of the books I've read, my progress in the
+                books I'm currently reading, and the list of books I want to read. Implemented
+                features include:
+            </span>
+            <ul style="margin-top: 0px;">
+                <li>searching for books and sourcing data via the Google Books API,</li>
+                <li>JSON serialization, local saves, and imports/exports for all app data and
+                    configurations,</li>
+                <li>customizable visual themes,</li>
+                <li>a barcode scanner to automatically find physical books by their ISBN,</li>
+                <li>and a stats page to track pages read and books completed by various time
+                    periods, the data for which is automatically saved when reading progress
+                    is updated.</li>
+            </ul>
+            <span>
+                Booklist can be sideloaded on Android from
+                <a href="https://prettytoastie.itch.io/booklist" target="_blank">itch.io</a>,
+                and an unsigned iOS app package and Windows desktop application are also
+                available for download though these platforms are not recommended.
+            </span>
+            <span>
+                The source code can be viewed on
+                <a href="https://github.com/8-bit-confusion/booklist" target="_blank">GitHub</a>.
+            </span>
+            <hr style="width: 100%;">
+            <a id="software-rasterizer" aria-hidden="true" tabindex="-1" style="height: 0px;"></a>
+            <div class="picture-row flex-row">
+                <img src="../resources/software_rasterizer-screenshot.png">
+                <div>
+                    <h2>Software Rasterizer</h2>
+                    <p>
+                        <span>
+                            A CPU-based 3D renderer written from scratch in C using SDL3 for
+                            window management, events, and writing pixels. Most algorithms
+                            are based on the work done by Sebastian Lague in
+                            <a href="https://www.youtube.com/watch?v=yyJ-hdISgnw" target="_blank">this video</a>,
+                            but all code was adapted to running in C without access to
+                            Unity Engine rendering, classes, or objects by me. Implemented
+                            features include:
+                        </span>
+                    </p>
+                    <ul>
+                        <li>file parsing and importing 3D models from .obj files,</li>
+                        <li>manual projection of models to screen space,</li>
+                        <li>manual rasterization of screenspace triangles,</li>
+                        <li>UV-based texture mapping and interpolation,</li>
+                        <li>support for rotation, translation, and scaling of models,</li>
+                        <li>basic global lighting,</li>
+                        <li>simple first-person camera movement,</li>
+                        <li>and near-plane clipping of triangles.</li>
+                    </ul>
+                    <span>
+                        A functional executable for Windows, all source code, and a script
+                        allowing the project to be built from source can be found on
+                        <a href="https://github.com/8-bit-confusion/software-rasterizer" target="_blank">GitHub</a>.
+                    </span>
+                </div>
+            </div>
+            <hr style="width: 100%;">
+            <a id="fbtn-tools" aria-hidden="true" tabindex="-1" style="height: 0px;"></a>
+            <div class="picture-row flex-row">
+                <img src="../resources/fbtntools-readme.png">
+                <div>
+                    <h2>FBTNTools</h2>
+                    <p>
+                        A simplified wrapper for several APIs, to be used by collaborators
+                        on a generative AI research project who were newer to Python. It
+                        provides two simplified wrappers:
+                    </p>
+                    <ul>
+                        <li>GalleryScrape, for downloading images from online
+                            galleries, converting them to base-64 encodings, and saving
+                            those encodings, and</li>
+                        <li>ChatUtils, for interacting with the then-current
+                            ChatGPT-4o via API.</li>
+                    </ul>
+                    <p>
+                        <span>
+                            The resource project, which had been on documenting possible
+                            biases along the lines of gender, 'gendered' interests like
+                            fashion, and race in ChatGPT's image generation, was
+                            discontinued when the supervising professor left for another
+                            position, but the source code can be viewed on
+                            <a href="https://github.com/8-bit-confusion/FBTNTools" target="_blank">GitHub</a>.<br>
+                        </span>
+                    </p>
+                    <p>
+                        The GitHub repository also includes detailed installation and usage
+                        information in its README.md.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="flex-col primary-footer">
+            <nav class="flex-row" style="padding: 0px; gap: 16px;">
+                <a href="../">Home</a>
+                <a href="../about/">About</a>
+                <a href="./">Projects</a>
+            </nav>
+            <small class="copyright">&copy; 2025 Lily Wasko</small>
+        </footer>
+    </body>
+</html>
