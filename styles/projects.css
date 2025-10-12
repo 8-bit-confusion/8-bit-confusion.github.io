@@ -1,0 +1,12 @@
+img#booklist {
+    width: 60%;
+    align-self: center;
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 768px) {
+    img#booklist { width: 75%; }
+}
+
+@media only screen and (max-width: 768px) {
+    img#booklist { width: 100%; }
+}
